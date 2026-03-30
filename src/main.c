@@ -90,18 +90,18 @@ void onInit()
     recomp_printf("[BK-ES] %d dialogos registrados\n", total);
 
     // === TOTALS PAGE LEVEL NAMES ===
-    // Bold font is separate from dialog font - use plain ASCII here
+    // Uses remapped bytes: [=Ñ, \=Ó, ]=Ú, &=Á, *=É, +=Í, #=¡, $=¿
     D_8036C58C[0].string  = (u8 *)"TOTAL DEL JUEGO";
-    D_8036C58C[1].string  = (u8 *)"MONTANA ESPIRAL";
+    D_8036C58C[1].string  = (u8 *)"MONTA[A ESPIRAL";
     D_8036C58C[2].string  = (u8 *)"GUARIDA DE GRUNTILDA";
-    D_8036C58C[3].string  = (u8 *)"MONTANA DE MUMBO";
+    D_8036C58C[3].string  = (u8 *)"MONTA[A DE MUMBO";
     D_8036C58C[4].string  = (u8 *)"CALA DEL TESORO";
     D_8036C58C[5].string  = (u8 *)"CAVERNA DE CLANKER";
     D_8036C58C[6].string  = (u8 *)"PANTANO BUBBLEGLOOP";
     D_8036C58C[7].string  = (u8 *)"PICO FREEZEEZY";
     D_8036C58C[8].string  = (u8 *)"VALLE DE GOBI";
-    D_8036C58C[9].string  = (u8 *)"MANSION MONSTRUOSA";
-    D_8036C58C[10].string = (u8 *)"BAHIA OXIDADA";
+    D_8036C58C[9].string  = (u8 *)"MANSI\\N MONSTRUOSA";
+    D_8036C58C[10].string = (u8 *)"BAH+A OXIDADA";
     D_8036C58C[11].string = (u8 *)"BOSQUE DEL RELOJ";
     D_8036C58C[12].string = (u8 *)"STOP 'N' SWOP";
 
@@ -146,29 +146,300 @@ static const struct { u8 font_idx; u8 glyph_idx; } spanish_map[] = {
     { 60, 7 }, // ] → Ú
 };
 
-// Map: base letter index for each Spanish char position
-// ¡→!(0), ¿→?(30), Á→A(32), É→E(36), Í→I(40), Ñ→N(45), Ó→O(46), Ú→U(52)
+// Map: target font index → source glyph to copy
 static const struct { u8 target_idx; u8 source_idx; } glyph_copy_map[] = {
-    { 2,  0  }, // # → copy ! glyph (for ¡)
-    { 3,  30 }, // $ → copy ? glyph (for ¿)
-    { 5,  32 }, // & → copy A glyph (for Á)
-    { 9,  36 }, // * → copy E glyph (for É)
-    { 10, 40 }, // + → copy I glyph (for Í)
-    { 58, 45 }, // [ → copy N glyph (for Ñ)
-    { 59, 46 }, // \ → copy O glyph (for Ó)
-    { 60, 52 }, // ] → copy U glyph (for Ú)
+    { 2,  0  }, // # pos → ! glyph (for ¡)
+    { 3,  30 }, // $ pos → ? glyph (for ¿)
+    { 5,  32 }, // & pos → A glyph (for Á)
+    { 9,  36 }, // * pos → E glyph (for É)
+    { 10, 40 }, // + pos → I glyph (for Í)
+    { 58, 45 }, // [ pos → N glyph (for Ñ)
+    { 59, 46 }, // \ pos → O glyph (for Ó)
+    { 60, 52 }, // ] pos → U glyph (for Ú)
 };
+
+// For CI8, the renderer reads:
+//   unk0 -> BKSpriteTextureBlock header (8 bytes: x, y, w, h as s16)
+//   pixel data at (unk0 + 1) aligned to 8
+//   unk4 -> shared palette (256 * 2 bytes RGBA16)
+//
+// We allocate new buffers with recomp_alloc (game-accessible memory),
+// copy the full chunk (header + pixel data) from the source glyph,
+// then modify pixels in-place to add accent marks.
+
+// Static pointers to our allocated glyph buffers (so they persist)
+static u8 *glyph_bufs[8];
+
+// Find the most common non-zero palette index in CI8 pixel data
+static u8 findForegroundIndex(u8 *pixels, s32 size) {
+    // Count occurrences of each non-zero index
+    s32 counts[256];
+    for (s32 i = 0; i < 256; i++) counts[i] = 0;
+    for (s32 i = 0; i < size; i++) {
+        if (pixels[i] != 0) counts[pixels[i]]++;
+    }
+    // Find the index with the highest count
+    u8 best = 1;
+    s32 bestCount = 0;
+    for (s32 i = 1; i < 256; i++) {
+        if (counts[i] > bestCount) {
+            bestCount = counts[i];
+            best = (u8)i;
+        }
+    }
+    return best;
+}
+
+// Find a semi-transparent palette index (for anti-aliasing edges)
+static u8 findSemiIndex(u8 *pixels, s32 size, u8 fg) {
+    // Look for a palette index that appears less often than fg (likely semi-transparent)
+    s32 counts[256];
+    for (s32 i = 0; i < 256; i++) counts[i] = 0;
+    for (s32 i = 0; i < size; i++) {
+        if (pixels[i] != 0 && pixels[i] != fg) counts[pixels[i]]++;
+    }
+    // Find the most common non-fg, non-zero index
+    u8 semi = fg;
+    s32 best = 0;
+    for (s32 i = 1; i < 256; i++) {
+        if (counts[i] > best) { best = counts[i]; semi = (u8)i; }
+    }
+    return semi;
+}
+
+// Safe pixel set (bounds check)
+static void px(u8 *pixels, s32 w, s32 h, s32 x, s32 y, u8 val) {
+    if (x >= 0 && x < w && y >= 0 && y < h) pixels[y * w + x] = val;
+}
+
+// Draw acute accent - 2 rows, thick diagonal
+static void drawAcuteAccent(u8 *pixels, s32 w, s32 new_h, u8 fg, u8 semi) {
+    s32 cx = w / 2;
+    // Row 0: top
+    px(pixels, w, new_h, cx,     0, fg);
+    px(pixels, w, new_h, cx + 1, 0, fg);
+    // Row 1: bottom
+    px(pixels, w, new_h, cx - 1, 1, fg);
+    px(pixels, w, new_h, cx,     1, fg);
+}
+
+// Draw tilde - 2 rows, centered wide wave
+static void drawTilde(u8 *pixels, s32 w, s32 new_h, u8 fg, u8 semi) {
+    s32 cx = (w - 1) / 2;  // center properly for odd/even widths
+    // Row 0: left hump
+    px(pixels, w, new_h, cx - 3, 0, semi);
+    px(pixels, w, new_h, cx - 2, 0, fg);
+    px(pixels, w, new_h, cx - 1, 0, fg);
+    px(pixels, w, new_h, cx,     0, fg);
+    px(pixels, w, new_h, cx + 1, 0, semi);
+    // Row 1: right hump
+    px(pixels, w, new_h, cx - 1, 1, semi);
+    px(pixels, w, new_h, cx,     1, fg);
+    px(pixels, w, new_h, cx + 1, 1, fg);
+    px(pixels, w, new_h, cx + 2, 1, fg);
+    px(pixels, w, new_h, cx + 3, 1, semi);
+}
 
 RECOMP_HOOK_RETURN("func_802F51B8")
 void injectSpanishGlyphs(void) {
     if (print_sFonts[0] == NULL) return;
 
-    // Copy existing glyphs to the replacement positions
-    // This ensures the format is 100% compatible (same CI8 data)
+    // First, copy base FontLetter entries to replacement positions
     for (s32 i = 0; i < 8; i++) {
         s32 tidx = glyph_copy_map[i].target_idx;
         s32 sidx = glyph_copy_map[i].source_idx;
         print_sFonts[0][tidx] = print_sFonts[0][sidx];
+    }
+
+    // Create vertically flipped versions for ¡ (i=0) and ¿ (i=1)
+    for (s32 i = 0; i < 2; i++) {
+        s32 tidx = glyph_copy_map[i].target_idx;
+        BKSpriteTextureBlock *src_block = (BKSpriteTextureBlock *)print_sFonts[0][tidx].unk0;
+        s32 w = src_block->w;
+        s32 h = src_block->h;
+        s32 pixel_size = w * h;
+
+        u8 *src_pixels = (u8 *)(src_block + 1);
+        while ((u64)src_pixels % 8) src_pixels++;
+
+        // Allocate buffer for flipped glyph
+        s32 total_size = 8 + pixel_size;
+        u8 *buf = (u8 *)recomp_alloc((unsigned long)(total_size + 16));
+        if (buf == NULL) continue;
+        glyph_bufs[i] = buf;
+
+        // Copy header (same dimensions)
+        BKSpriteTextureBlock *new_block = (BKSpriteTextureBlock *)buf;
+        new_block->x = src_block->x;
+        new_block->y = src_block->y;
+        new_block->w = (s16)w;
+        new_block->h = (s16)h;
+
+        // Copy pixels vertically flipped (last row → first row)
+        u8 *dst_pixels = buf + 8;
+        for (s32 y = 0; y < h; y++) {
+            for (s32 x = 0; x < w; x++) {
+                dst_pixels[y * w + x] = src_pixels[(h - 1 - y) * w + x];
+            }
+        }
+
+        print_sFonts[0][tidx].unk0 = (void *)buf;
+    }
+
+    // Create same-size glyph copies with accent marks for Á É Í Ó Ú Ñ
+    // Overwrites top 2 rows of letter - no height change = stays in line
+    // Skip ¡(i=0) and ¿(i=1) - they use ! and ? glyphs as-is
+    for (s32 i = 2; i < 8; i++) {
+        s32 tidx = glyph_copy_map[i].target_idx;
+        BKSpriteTextureBlock *src_block = (BKSpriteTextureBlock *)print_sFonts[0][tidx].unk0;
+        s32 w = src_block->w;
+        s32 h = src_block->h;
+        s32 pixel_size = w * h;
+
+        // Find source pixel data (after header, aligned to 8)
+        u8 *src_pixels = (u8 *)(src_block + 1);
+        while ((u64)src_pixels % 8) src_pixels++;
+
+        // Find foreground color
+        u8 fg = findForegroundIndex(src_pixels, pixel_size);
+        u8 semi = findSemiIndex(src_pixels, pixel_size, fg);
+
+        // Allocate same size: header (8 bytes) + pixel data
+        s32 total_size = 8 + pixel_size;
+        u8 *buf = (u8 *)recomp_alloc((unsigned long)(total_size + 16));
+        if (buf == NULL) continue;
+        glyph_bufs[i] = buf;
+
+        // Copy header (same dimensions)
+        BKSpriteTextureBlock *new_block = (BKSpriteTextureBlock *)buf;
+        new_block->x = src_block->x;
+        new_block->y = src_block->y;
+        new_block->w = (s16)w;
+        new_block->h = (s16)h;
+
+        // Copy pixel data
+        u8 *dst_pixels = buf + 8;
+        for (s32 j = 0; j < pixel_size; j++) {
+            dst_pixels[j] = src_pixels[j];
+        }
+
+        // Draw accent customized per letter
+        // i=2:Á(A), i=3:É(E), i=4:Í(I), i=5:Ñ(N), i=6:Ó(O), i=7:Ú(U)
+        s32 cx = (w - 1) / 2;
+
+        if (i == 5) {
+            // Ñ: clear top 2 rows, tilde shifted more left + wider
+            for (s32 x = 0; x < w; x++) { dst_pixels[x] = 0; dst_pixels[w + x] = 0; }
+            s32 nc = cx - 2;  // shift more left
+            px(dst_pixels, w, h, nc - 3, 0, semi);
+            px(dst_pixels, w, h, nc - 2, 0, fg);
+            px(dst_pixels, w, h, nc - 1, 0, fg);
+            px(dst_pixels, w, h, nc,     0, fg);
+            px(dst_pixels, w, h, nc + 1, 0, fg);
+            px(dst_pixels, w, h, nc + 2, 0, semi);
+            px(dst_pixels, w, h, nc - 1, 1, semi);
+            px(dst_pixels, w, h, nc,     1, fg);
+            px(dst_pixels, w, h, nc + 1, 1, fg);
+            px(dst_pixels, w, h, nc + 2, 1, fg);
+            px(dst_pixels, w, h, nc + 3, 1, fg);
+            px(dst_pixels, w, h, nc + 4, 1, semi);
+        } else if (i == 2) {
+            // Á: A has peak at top - clear top 2 rows, accent shifted more left
+            for (s32 x = 0; x < w; x++) { dst_pixels[x] = 0; dst_pixels[w + x] = 0; }
+            px(dst_pixels, w, h, cx - 1, 0, fg);
+            px(dst_pixels, w, h, cx,     0, fg);
+            px(dst_pixels, w, h, cx - 2, 1, fg);
+            px(dst_pixels, w, h, cx - 1, 1, fg);
+        } else if (i == 3) {
+            // É: E has top bar - DON'T clear, draw accent ABOVE letter (row 0 only)
+            // Just overwrite row 0 pixels, keep E's top bar intact
+            for (s32 x = 0; x < w; x++) { dst_pixels[x] = 0; }
+            px(dst_pixels, w, h, cx + 1, 0, fg);
+            px(dst_pixels, w, h, cx,     0, fg);
+            px(dst_pixels, w, h, cx - 1, 0, semi);
+        } else if (i == 4) {
+            // Í: I is too narrow for accent - WIDEN the glyph
+            // Reallocate with extra width for the accent mark
+            s32 extra_w = 4;
+            s32 new_w = w + extra_w;
+            s32 new_pixel_size = new_w * h;
+            s32 new_total = 8 + new_pixel_size;
+
+            u8 *wbuf = (u8 *)recomp_alloc((unsigned long)(new_total + 16));
+            if (wbuf == NULL) continue;
+            glyph_bufs[i] = wbuf;
+
+            // Header with wider width
+            BKSpriteTextureBlock *wb = (BKSpriteTextureBlock *)wbuf;
+            wb->x = src_block->x;
+            wb->y = src_block->y;
+            wb->w = (s16)new_w;
+            wb->h = (s16)h;
+
+            // Copy pixels: original I centered, extra space on right
+            u8 *wp = wbuf + 8;
+            for (s32 y = 0; y < h; y++) {
+                for (s32 x = 0; x < new_w; x++) {
+                    if (x < w) {
+                        wp[y * new_w + x] = src_pixels[y * w + x];
+                    } else {
+                        wp[y * new_w + x] = 0;
+                    }
+                }
+            }
+
+            // Draw accent in the extra space (right side, top)
+            px(wp, new_w, h, new_w - 2, 0, fg);
+            px(wp, new_w, h, new_w - 1, 0, fg);
+            px(wp, new_w, h, new_w - 3, 1, fg);
+            px(wp, new_w, h, new_w - 2, 1, fg);
+
+            print_sFonts[0][tidx].unk0 = (void *)wbuf;
+            continue;  // skip the normal unk0 assignment below
+        } else {
+            // Ó, Ú: these looked perfect before - keep exact same logic
+            s32 ocx = w / 2;  // original center calculation
+            for (s32 x = 0; x < w; x++) { dst_pixels[x] = 0; dst_pixels[w + x] = 0; }
+            px(dst_pixels, w, h, ocx,     0, fg);
+            px(dst_pixels, w, h, ocx + 1, 0, fg);
+            px(dst_pixels, w, h, ocx - 1, 1, fg);
+            px(dst_pixels, w, h, ocx,     1, fg);
+        }
+
+        // Point FontLetter to our buffer (same size, stays in line)
+        print_sFonts[0][tidx].unk0 = (void *)buf;
+    }
+
+    // Also inject into bold font (print_sFonts[1] for indices < 10)
+    if (print_sFonts[1] != NULL) {
+        // Indices in bold numbers font: #=2, $=3, &=5, *=9
+        for (s32 i = 0; i < 4; i++) {
+            s32 tidx = glyph_copy_map[i].target_idx;  // 2, 3, 5, 9
+            s32 sidx = glyph_copy_map[i].source_idx;
+            // Copy base glyph from bold font (same index mapping)
+            print_sFonts[1][tidx] = print_sFonts[1][sidx];
+        }
+    }
+
+    recomp_printf("[BK-ES] Glifos inyectados\n");
+}
+
+// Hook for bold letters font (lazy loaded via func_802F5494)
+// When print_sFonts[3] is loaded, we need to inject there too
+// Indices in bold letters: +=0(10-10), [=48(58-10), \=49(59-10), ]=50(60-10)
+RECOMP_HOOK_RETURN("func_802F5494")
+void injectBoldGlyphs(s32 letterId, s32 *fontType) {
+    static s32 bold_injected = 0;
+    if (print_sFonts[3] != NULL && !bold_injected) {
+        // + (index 10) → I (index 40): bold letters idx 0 → idx 30
+        print_sFonts[3][0] = print_sFonts[3][30];   // + → copy of I
+        // [ (index 58) → N (index 45): bold letters idx 48 → idx 35
+        print_sFonts[3][48] = print_sFonts[3][35];  // [ → copy of N
+        // \ (index 59) → O (index 46): bold letters idx 49 → idx 36
+        print_sFonts[3][49] = print_sFonts[3][36];  // \ → copy of O
+        // ] (index 60) → U (index 52): bold letters idx 50 → idx 42
+        print_sFonts[3][50] = print_sFonts[3][42];  // ] → copy of U
+        bold_injected = 1;
     }
 }
 
