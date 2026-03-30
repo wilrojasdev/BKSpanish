@@ -5,36 +5,53 @@
     },
     "textures": [
         {
-            "hashes": { "rice": "E6A5BFBF#3#2" },
-            "path": "fonts/Banjo-Kazooie#E6A5BFBF#3#2_all.png"
+            "hashes": {
+                "rice": "6f7d3706#3#1",
+                "rt64": "46d085fefda330b9"
+            },
+            "path": "fonts/excl_inv.png"
         },
         {
-            "hashes": { "rice": "6E2F0F7F#3#2" },
-            "path": "fonts/Banjo-Kazooie#6E2F0F7F#3#2_all.png"
+            "hashes": {
+                "rice": "66273ce4#3#1",
+                "rt64": "9d9e57c4fd6faa16"
+            },
+            "path": "fonts/A_acute.png"
         },
         {
-            "hashes": { "rice": "CD0854EE#3#2" },
-            "path": "fonts/Banjo-Kazooie#CD0854EE#3#2_all.png"
+            "hashes": {
+                "rice": "3828685f#3#1",
+                "rt64": "d8732e28b7eef336"
+            },
+            "path": "fonts/N_tilde.png"
         },
         {
-            "hashes": { "rice": "074FAF6B#3#2" },
-            "path": "fonts/Banjo-Kazooie#074FAF6B#3#2_all.png"
+            "hashes": {
+                "rice": "9f1ca91b#3#1",
+                "rt64": "a26e9bc91c95c6b5"
+            },
+            "path": "fonts/O_acute.png"
         },
         {
-            "hashes": { "rice": "20B82E8E#3#2" },
-            "path": "fonts/Banjo-Kazooie#20B82E8E#3#2_all.png"
+            "hashes": {
+                "rice": "76880d35#3#1",
+                "rt64": "1e87c09cb6d1d7a4"
+            },
+            "path": "fonts/I_acute.png"
         },
         {
-            "hashes": { "rice": "D22E23E4#3#2" },
-            "path": "fonts/Banjo-Kazooie#D22E23E4#3#2_all.png"
+            "hashes": {
+                "rice": "591a5e9f#3#1",
+                "rt64": "21647394286000a5"
+            },
+            "path": "fonts/U_acute.png"
         },
         {
-            "hashes": { "rice": "B8B7B0BF#3#2" },
-            "path": "fonts/Banjo-Kazooie#B8B7B0BF#3#2_all.png"
-        },
-        {
-            "hashes": { "rice": "A741919B#3#2" },
-            "path": "fonts/Banjo-Kazooie#A741919B#3#2_all.png"
+            "hashes": {
+                "rice": "a7e8ed6c#3#1",
+                "rt64": "f16b15212cc854cc"
+            },
+            "path": "fonts/E_acute.png"
         }
     ]
 }
