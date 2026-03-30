@@ -38,6 +38,7 @@ extern u8 *chGameSelectBottomZoombox;
 
 // Imports from Asset Expansion Pak
 RECOMP_IMPORT("bk_recomp_asset_expansion_pak", void bk_recomp_aep_register_replacement(enum asset_e asset_id, void *asset_data));
+RECOMP_IMPORT("bk_recomp_asset_expansion_pak", void bk_recomp_aep_register_replacement_with_size(enum asset_e asset_id, void *asset_data, s32 size));
 RECOMP_IMPORT("bk_recomp_asset_expansion_pak", void bk_recomp_aep_unregister_replacement(enum asset_e asset_id));
 
 // String buffers for dynamic text
@@ -119,9 +120,14 @@ void onInit()
     for (s32 t = 0; t < 21; t++) {
         for (s32 i = 0; i < tables[t]->count; i++) {
             if (tables[t]->defs[i].built_data != NULL) {
-                bk_recomp_aep_register_replacement(
-                    tables[t]->defs[i].asset_id,
-                    (void *)tables[t]->defs[i].built_data
+                s32 aid = tables[t]->defs[i].asset_id;
+                // Skip quiz question assets (0x1213-0x1276) - format incompatible
+                // TODO v3: implement raw binary quiz format
+                if (aid >= 0x1213 && aid <= 0x1276) continue;
+                bk_recomp_aep_register_replacement_with_size(
+                    aid,
+                    (void *)tables[t]->defs[i].built_data,
+                    tables[t]->defs[i].built_size
                 );
                 total++;
             }
@@ -131,20 +137,21 @@ void onInit()
     recomp_printf("[BK-ES] %d dialogos registrados\n", total);
 
     // === TOTALS PAGE LEVEL NAMES ===
-    // Uses remapped bytes: [=Ñ, \=Ó, ]=Ú, &=Á, *=É, +=Í, #=¡, $=¿
-    D_8036C58C[0].string  = (u8 *)"TOTAL DEL JUEGO";
-    D_8036C58C[1].string  = (u8 *)"MONTA[A ESPIRAL";
-    D_8036C58C[2].string  = (u8 *)"GUARIDA DE GRUNTILDA";
-    D_8036C58C[3].string  = (u8 *)"MONTA[A DE MUMBO";
-    D_8036C58C[4].string  = (u8 *)"CALA DEL TESORO";
-    D_8036C58C[5].string  = (u8 *)"CAVERNA DE CLANKER";
-    D_8036C58C[6].string  = (u8 *)"PANTANO BUBBLEGLOOP";
-    D_8036C58C[7].string  = (u8 *)"PICO FREEZEEZY";
-    D_8036C58C[8].string  = (u8 *)"VALLE DE GOBI";
-    D_8036C58C[9].string  = (u8 *)"MANSI\\N MONSTRUOSA";
-    D_8036C58C[10].string = (u8 *)"BAH+A OXIDADA";
-    D_8036C58C[11].string = (u8 *)"BOSQUE DEL RELOJ";
-    D_8036C58C[12].string = (u8 *)"STOP 'N' SWOP";
+    // Bold font doesn't support remapped glyphs - use plain ASCII
+    // Adjust X position for centering based on string length
+    D_8036C58C[0].x  = 0x40; D_8036C58C[0].string  = (u8 *)"TOTAL DEL JUEGO";
+    D_8036C58C[1].x  = 0x40; D_8036C58C[1].string  = (u8 *)"MONTANA ESPIRAL";
+    D_8036C58C[2].x  = 0x1B; D_8036C58C[2].string  = (u8 *)"GUARIDA DE GRUNTILDA";
+    D_8036C58C[3].x  = 0x24; D_8036C58C[3].string  = (u8 *)"MONTANA DE MUMBO";
+    D_8036C58C[4].x  = 0x3C; D_8036C58C[4].string  = (u8 *)"CALA DEL TESORO";
+    D_8036C58C[5].x  = 0x28; D_8036C58C[5].string  = (u8 *)"CAVERNA DE CLANKER";
+    D_8036C58C[6].x  = 0x20; D_8036C58C[6].string  = (u8 *)"PANTANO BUBBLEGLOOP";
+    D_8036C58C[7].x  = 0x48; D_8036C58C[7].string  = (u8 *)"PICO FREEZEEZY";
+    D_8036C58C[8].x  = 0x48; D_8036C58C[8].string  = (u8 *)"VALLE DE GOBI";
+    D_8036C58C[9].x  = 0x1A; D_8036C58C[9].string  = (u8 *)"MANSION MONSTRUOSA";
+    D_8036C58C[10].x = 0x44; D_8036C58C[10].string = (u8 *)"BAHIA OXIDADA";
+    D_8036C58C[11].x = 0x38; D_8036C58C[11].string = (u8 *)"BOSQUE DEL RELOJ";
+    D_8036C58C[12].x = 0x48; D_8036C58C[12].string = (u8 *)"STOP 'N' SWOP";
 
     // === GAME SELECT MENU ===
     CONTROL_STICK_INSTRUCTIONS = "USA EL STICK PARA ELEGIR UNA PARTIDA.";
@@ -155,6 +162,25 @@ void onInit()
     D_8036C4E0[0].str = "VOLVER AL JUEGO";
     D_8036C4E0[2].str = "VER TOTALES";
     D_8036C4E0[3].str = "GUARDAR Y SALIR";
+}
+
+// Hook zoombox string display to translate confirmation prompts
+
+// Simple string comparison (avoid conflicting strcmp)
+static s32 str_eq(const char *a, const char *b) {
+    while (*a && *b) { if (*a++ != *b++) return 0; }
+    return *a == *b;
+}
+
+RECOMP_HOOK("func_803183A4")
+void translateZoomboxStrings(void *zoombox, char **arg1) {
+    if (*arg1 != NULL) {
+        if (str_eq(*arg1, "ARE YOU SURE?")) {
+            *arg1 = "ESTAS SEGURO?";
+        } else if (str_eq(*arg1, "A - YES, B - NO")) {
+            *arg1 = "A - SI, B - NO";
+        }
+    }
 }
 
 // ============================================================
@@ -497,7 +523,7 @@ void injectSpanishGlyphs(void) {
             out[slen] = '\0';
         }
 
-        D_8036C4E0[2].str = hash_display_str;
+        // Hash display removed - was for debug only
     }
 
     recomp_printf("[BK-ES] Glifos inyectados\n");

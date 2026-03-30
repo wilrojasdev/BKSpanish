@@ -17,6 +17,7 @@ typedef struct {
     DialogLine *top;
     s32 top_count;
     u8 *built_data;     // full asset binary (header + dialog data), filled at init
+    s32 built_size;     // size of built_data in bytes
 } DialogDef;
 
 // Table of dialog definitions for a world

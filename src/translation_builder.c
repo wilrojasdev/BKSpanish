@@ -68,7 +68,10 @@ static void build_dialog(DialogDef *def) {
     s32 i, size, slen;
     u8 *p;
 
-    if (def->top != NULL) {
+    // Quiz assets (0x1213-0x1276) use quiz format (no dialog header)
+    s32 is_quiz = (def->asset_id >= 0x1213 && def->asset_id <= 0x1276);
+
+    if (!is_quiz) {
         // ===== STANDARD DIALOG FORMAT =====
         size = 3; // header
         size += 1; // bottom count
@@ -83,6 +86,7 @@ static void build_dialog(DialogDef *def) {
         }
 
         def->built_data = recomp_alloc(size);
+        def->built_size = size;
         p = def->built_data;
 
         *p++ = 0x03;
@@ -129,6 +133,7 @@ static void build_dialog(DialogDef *def) {
         }
 
         def->built_data = recomp_alloc(size);
+        def->built_size = size;
         p = def->built_data;
 
         // Quiz metadata header
