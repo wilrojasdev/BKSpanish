@@ -43,6 +43,47 @@ RECOMP_IMPORT("bk_recomp_asset_expansion_pak", void bk_recomp_aep_unregister_rep
 // String buffers for dynamic text
 static char new_str[2][0x40];
 
+// Hash display buffer for pause menu
+static char hash_display_str[256];
+
+// ============================================================
+// Rice CRC32 - from rt64 texture_hasher (GPL licensed tool)
+// Computes the same hash used by HD texture packs
+// Parameters: src=pixel data, width/height in pixels,
+//   size=CI8 size value (2), rowStride=bytes per row
+// ============================================================
+static u32 rice_crc32(const u8 *src, s32 width, s32 height, s32 size, s32 rowStride) {
+    u32 crc32Ret = 0;
+    u32 bytesPerLine = (u32)(width << size) >> 1;
+    s32 y = height - 1;
+    while (y >= 0) {
+        u32 esi = 0;
+        s32 x = (s32)bytesPerLine - 4;
+        while (x >= 0) {
+            esi = ((u32)src[x]) | ((u32)src[x+1] << 8) | ((u32)src[x+2] << 16) | ((u32)src[x+3] << 24);
+            esi ^= (u32)x;
+            crc32Ret = (crc32Ret << 4) + ((crc32Ret >> 28) & 15);
+            crc32Ret += esi;
+            x -= 4;
+        }
+        esi ^= (u32)y;
+        crc32Ret += esi;
+        src += rowStride;
+        --y;
+    }
+    return crc32Ret;
+}
+
+// Convert u32 to 8-char hex string
+static void u32_to_hex(u32 val, char *out) {
+    static const char hex[] = "0123456789ABCDEF";
+    for (s32 i = 7; i >= 0; i--) {
+        out[i] = hex[val & 0xF];
+        val >>= 4;
+    }
+    out[8] = '\0';
+}
+
 // Run after AEP is initialised
 RECOMP_HOOK_RETURN("assetCache_init")
 void onInit()
@@ -419,6 +460,44 @@ void injectSpanishGlyphs(void) {
             // Copy base glyph from bold font (same index mapping)
             print_sFonts[1][tidx] = print_sFonts[1][sidx];
         }
+    }
+
+    // Rice CRC hash computation for HD texture pack compatibility
+    // CI8 format: size=2 (G_IM_SIZ_8b), rowStride = width bytes
+    {
+        char *out = hash_display_str;
+        out[0] = '\0';
+        s32 slen = 0;
+
+        for (s32 i = 0; i < 8; i++) {
+            s32 tidx = glyph_copy_map[i].target_idx;
+            void *ptr = print_sFonts[0][tidx].unk0;
+            if (ptr == NULL) continue;
+
+            BKSpriteTextureBlock *blk = (BKSpriteTextureBlock *)ptr;
+            s32 w = blk->w;
+            s32 h = blk->h;
+            if (w <= 0 || h <= 0 || w > 64 || h > 64) continue;
+
+            // CI8: pixel data starts after header, aligned to 8
+            u8 *pixels = (u8 *)(blk + 1);
+            while ((u64)pixels % 8) pixels++;
+
+            // Rice CRC: size=2 (CI8/8b), rowStride=w (1 byte per pixel for CI8)
+            u32 hash = rice_crc32(pixels, w, h, 2, w);
+            char hexbuf[9];
+            u32_to_hex(hash, hexbuf);
+
+            // Format: X:HASH#3#2
+            static const char labels[] = "!$AEINOU";
+            if (slen > 0) out[slen++] = ' ';
+            out[slen++] = labels[i];
+            out[slen++] = ':';
+            for (s32 j = 0; j < 8; j++) out[slen++] = hexbuf[j];
+            out[slen] = '\0';
+        }
+
+        D_8036C4E0[2].str = hash_display_str;
     }
 
     recomp_printf("[BK-ES] Glifos inyectados\n");

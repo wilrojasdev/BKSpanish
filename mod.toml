@@ -38,4 +38,14 @@ mod_filename = "bk_spanish_translation"
 func_reference_syms_file = "BanjoRecompSyms/bk.us.rev0.syms.toml"
 data_reference_syms_files = [ "BanjoRecompSyms/bk.us.rev0.datasyms.toml" ]
 
-additional_files = [ ]
+additional_files = [
+    "rt64.json",
+    "fonts/Banjo-Kazooie#E6A5BFBF#3#2_all.png",
+    "fonts/Banjo-Kazooie#6E2F0F7F#3#2_all.png",
+    "fonts/Banjo-Kazooie#CD0854EE#3#2_all.png",
+    "fonts/Banjo-Kazooie#074FAF6B#3#2_all.png",
+    "fonts/Banjo-Kazooie#20B82E8E#3#2_all.png",
+    "fonts/Banjo-Kazooie#D22E23E4#3#2_all.png",
+    "fonts/Banjo-Kazooie#B8B7B0BF#3#2_all.png",
+    "fonts/Banjo-Kazooie#A741919B#3#2_all.png"
+]

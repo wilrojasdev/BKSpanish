@@ -1,0 +1,40 @@
+{
+    "configuration": {
+        "configurationVersion": 3,
+        "hashVersion": 5
+    },
+    "textures": [
+        {
+            "hashes": { "rice": "E6A5BFBF#3#2" },
+            "path": "fonts/Banjo-Kazooie#E6A5BFBF#3#2_all.png"
+        },
+        {
+            "hashes": { "rice": "6E2F0F7F#3#2" },
+            "path": "fonts/Banjo-Kazooie#6E2F0F7F#3#2_all.png"
+        },
+        {
+            "hashes": { "rice": "CD0854EE#3#2" },
+            "path": "fonts/Banjo-Kazooie#CD0854EE#3#2_all.png"
+        },
+        {
+            "hashes": { "rice": "074FAF6B#3#2" },
+            "path": "fonts/Banjo-Kazooie#074FAF6B#3#2_all.png"
+        },
+        {
+            "hashes": { "rice": "20B82E8E#3#2" },
+            "path": "fonts/Banjo-Kazooie#20B82E8E#3#2_all.png"
+        },
+        {
+            "hashes": { "rice": "D22E23E4#3#2" },
+            "path": "fonts/Banjo-Kazooie#D22E23E4#3#2_all.png"
+        },
+        {
+            "hashes": { "rice": "B8B7B0BF#3#2" },
+            "path": "fonts/Banjo-Kazooie#B8B7B0BF#3#2_all.png"
+        },
+        {
+            "hashes": { "rice": "A741919B#3#2" },
+            "path": "fonts/Banjo-Kazooie#A741919B#3#2_all.png"
+        }
+    ]
+}
