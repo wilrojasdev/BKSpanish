@@ -298,7 +298,7 @@ static DialogLine a29_t[] = {
 // 0xF69 - Bottles TTC entrance (5B, 1T)
 static DialogLine f69_b[] = {
     { BOTTLES,         "\xA1" "AHOY! \xA1" "BIENVENIDOS A" },
-    { BOTTLES,         "TREASURE TROVE COVE." },
+    { BOTTLES,         "CALA DEL TESORO." },
     { BOTTLES,         "HAY DOS NUEVOS" },
     { BOTTLES,         "MOVIMIENTOS AQU\xCD." },
     { DIALOG_CLOSE_ALT, "" },

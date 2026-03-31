@@ -68,8 +68,10 @@ static void build_dialog(DialogDef *def) {
     s32 i, size, slen;
     u8 *p;
 
-    // Quiz assets (0x1213-0x1276) use quiz format (no dialog header)
-    s32 is_quiz = (def->asset_id >= 0x1213 && def->asset_id <= 0x1276);
+    // Quiz assets use quiz format (no dialog header)
+    // Ranges: 0x1213-0x1276 (text), 0x12DB-0x12ED (picture), 0x13A3-0x13D5 (sound/music), 0x1407-0x1424 (Grunty personal)
+    s32 is_quiz = (def->asset_id >= 0x1213 && def->asset_id <= 0x1276) ||
+                  (def->asset_id >= 0x1407 && def->asset_id <= 0x1424);
 
     if (!is_quiz) {
         // ===== STANDARD DIALOG FORMAT =====
@@ -142,9 +144,16 @@ static void build_dialog(DialogDef *def) {
         *p++ = 0x00;  // offset_v0 high byte = 0
 
         // Quiz metadata (this is what the quiz parser actually reads)
-        *p++ = (u8)num_questions;
-        *p++ = (u8)num_answers;
-        *p++ = 0x00; // num_wrong_only = 0
+        if (def->asset_id >= 0x1407 && def->asset_id <= 0x1424) {
+            // Grunty personal questions: [0x05] [0x00] [entry_count]
+            *p++ = 0x05;
+            *p++ = 0x00;
+            *p++ = (u8)entry_count;
+        } else {
+            *p++ = (u8)num_questions;
+            *p++ = (u8)num_answers;
+            *p++ = 0x00; // num_wrong_only = 0
+        }
 
         // Write all entries (flat, no count bytes)
         for (i = 0; i < entry_count; i++) {

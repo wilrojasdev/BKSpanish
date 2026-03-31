@@ -225,7 +225,7 @@ static DialogLine e13_t[] = {
 // 0xE12 BOTTOM
 static DialogLine e12_b[] = {
     { BOTTLES,              "OK, ES HORA. EN EL" },
-    { BOTTLES,              "SPIRAL MOUNTAIN LES" },
+    { BOTTLES,              "MONTA\xD1" "A ESPIRAL LES" },
     { BOTTLES,              "CONTAR\xC9 C\xD3MO SEGUIR." },
     { DIALOG_CLOSE_ALT,     "" },
 };
@@ -357,7 +357,7 @@ static DialogLine e09_b[] = {
     { DIALOG_COND_MINIMIZE, "" },
     { BOTTLES,              "MMM... \xA1" "COMO QUIERAN! LES ENSE\xD1O LOS PRIMEROS MOVIMIENTOS PARA QUE EMPIECEN." },
     { DIALOG_TRIGGER,       "\x06" },
-    { BOTTLES,              "NOS VEMOS EN EL SPIRAL MOUNTAIN." },
+    { BOTTLES,              "NOS VEMOS EN LA MONTA\xD1" "A ESPIRAL." },
     { DIALOG_CLOSE_ALT,     "" },
 };
 

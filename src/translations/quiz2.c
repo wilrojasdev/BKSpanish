@@ -164,7 +164,7 @@ static DialogLine _121a_t[] = {
 static DialogLine _121b_b[] = {
     { 0x80, "ESTA PREGUNTA DA ALAS," },
     { 0x80, "\xA1" "CUENTA LAS COLINAS DEL" },
-    { 0x80, "TOPO EN SPIRAL MOUNTAIN" },
+    { 0x80, "TOPO EN MONTA\xD1" "A ESPIRAL" },
     { 0x80, "SIN DEMORAS!" },
     { 0x81, "8" },
     { 0x82, "7" },
@@ -192,12 +192,12 @@ static DialogLine _121c_t[] = {
 
 /* ============================================================
  * 0x121D - How many puzzles to open Mumbo's Mountain door (B:6 T:0 -> correct: 1)
- * DE: "LEICHTE FRAGEN HIER / ZUHAUF, WIEVIELE / PUZZLETEILE MACHEN DIE TÜR ZU MUMBO'S MOUNTAIN AUF?"
+ * DE: "LEICHTE FRAGEN HIER / ZUHAUF, WIEVIELE / PUZZLETEILE MACHEN DIE TÜR ZU MONTA\xD1" "A DE MUMBO AUF?"
  * ============================================================ */
 static DialogLine _121d_b[] = {
     { 0x80, "PREGUNTAS F\xC1" "CILES TENDR\xC1S," },
     { 0x80, "\xBF" "CU\xC1NTOS PUZLES NECESITAS" },
-    { 0x80, "PARA ABRIR LA PUERTA DE MUMBO'S MOUNTAIN Y ENTRAR\xC1S?" },
+    { 0x80, "PARA ABRIR LA PUERTA DE MONTA\xD1" "A DE MUMBO Y ENTRAR\xC1S?" },
     { 0x81, "1" },
     { 0x82, "2" },
     { 0x83, "3" },
@@ -224,10 +224,10 @@ static DialogLine _121e_t[] = {
 
 /* ============================================================
  * 0x121F - Monkey on Mumbo's Mountain throws what? (B:5 T:0 -> correct: ORANGEN/oranges)
- * DE: "DER AFFE AUF MUMBO'S / MOUNTAIN IST FÜRCHTERLICH, WOMIT BEWIRFT ER DICH?"
+ * DE: "DER AFFE AUF MONTA\xD1" "A DE MUMBO / MOUNTAIN IST FÜRCHTERLICH, WOMIT BEWIRFT ER DICH?"
  * ============================================================ */
 static DialogLine _121f_b[] = {
-    { 0x80, "EL MONO EN MUMBO'S" },
+    { 0x80, "EL MONO EN MONTA\xD1" "A DE MUMBO" },
     { 0x80, "MOUNTAIN DA MUCHO PAVOR, \xBF" "CON QU\xC9 TE ATACA EL AGRESOR?" },
     { 0x81, "NARANJAS" },
     { 0x82, "BARRILES" },
@@ -239,10 +239,10 @@ static DialogLine _121f_t[] = {
 
 /* ============================================================
  * 0x1220 - Worm in tower on Mumbo's Mountain, name? (B:6 T:0 -> correct: TICKER)
- * DE: "AUF MUMBO'S MOUNTAIN, IN / EINEM TURM, WIE HEISST / DER DORT HAUSENDE WURM?"
+ * DE: "AUF MONTA\xD1" "A DE MUMBO, IN / EINEM TURM, WIE HEISST / DER DORT HAUSENDE WURM?"
  * ============================================================ */
 static DialogLine _1220_b[] = {
-    { 0x80, "EN MUMBO'S MOUNTAIN, EN UNA" },
+    { 0x80, "EN MONTA\xD1" "A DE MUMBO, EN UNA" },
     { 0x80, "TORRE, \xBF" "C\xD3MO SE LLAMA" },
     { 0x80, "EL GUSANO QUE ALL\xCD" " CORRE?" },
     { 0x81, "TICKER, LA TERMITA" },
@@ -271,10 +271,10 @@ static DialogLine _1221_t[] = {
 
 /* ============================================================
  * 0x1222 - Jinjo color in lake on Mumbo's Mountain (B:5 T:0 -> correct: BLAU/blue)
- * DE: "AUF MUMBO'S MOUNTAIN EIN SEE, / ICH DORT EINEN JINJO WELCHER FARBE SEH'?"
+ * DE: "AUF MONTA\xD1" "A DE MUMBO EIN SEE, / ICH DORT EINEN JINJO WELCHER FARBE SEH'?"
  * ============================================================ */
 static DialogLine _1222_b[] = {
-    { 0x80, "EN MUMBO'S MOUNTAIN HAY UN LAGO A VER," },
+    { 0x80, "EN MONTA\xD1" "A DE MUMBO HAY UN LAGO A VER," },
     { 0x80, "\xBF" "DE QU\xC9 COLOR ES EL JINJO QUE ALL\xCD PUEDO VER?" },
     { 0x81, "AZUL" },
     { 0x82, "NEGRO" },
@@ -286,12 +286,12 @@ static DialogLine _1222_t[] = {
 
 /* ============================================================
  * 0x1223 - What swims in the lake of Mumbo's Mountain (B:6 T:0 -> correct: FISCHSCHWARM/fish school)
- * DE: "WAS SCHWIMMT DENN DA SO / DUMM IM SEE VON / MUMBO'S MOUNTAIN HERUM?"
+ * DE: "WAS SCHWIMMT DENN DA SO / DUMM IM SEE VON / MONTA\xD1" "A DE MUMBO HERUM?"
  * ============================================================ */
 static DialogLine _1223_b[] = {
     { 0x80, "\xBF" "QU\xC9 NADA TAN TONTAMENTE" },
-    { 0x80, "EN EL LAGO DE MUMBO'S" },
-    { 0x80, "MOUNTAIN, EL IMPRUDENTE?" },
+    { 0x80, "EN EL LAGO DE MONTA\xD1" "A" },
+    { 0x80, "DE MUMBO, EL IMPRUDENTE?" },
     { 0x81, "UN BANCO DE PECES" },
     { 0x82, "UN TIBUR\xD3N MALVADO" },
     { 0x83, "UN VIEJO HIPOP\xD3TAMO" },
@@ -302,10 +302,10 @@ static DialogLine _1223_t[] = {
 
 /* ============================================================
  * 0x1224 - How many straw huts on Mumbo's Mountain (B:7 T:0 -> correct: 6)
- * DE: "AUF MUMBO'S MOUNTAIN / STEHEN HÜTTEN AUS STROH, / WIEVIELE WAREN ES DENN / SO?"
+ * DE: "AUF MONTA\xD1" "A DE MUMBO / STEHEN HÜTTEN AUS STROH, / WIEVIELE WAREN ES DENN / SO?"
  * ============================================================ */
 static DialogLine _1224_b[] = {
-    { 0x80, "EN MUMBO'S MOUNTAIN" },
+    { 0x80, "EN MONTA\xD1" "A DE MUMBO" },
     { 0x80, "HAY CABA\xD1" "AS DE PAJA," },
     { 0x80, "\xBF" "CU\xC1NTAS HAB\xCD" "A EN TOTAL," },
     { 0x80, "GENTUZA BAJA?" },
@@ -319,12 +319,12 @@ static DialogLine _1224_t[] = {
 
 /* ============================================================
  * 0x1225 - Gorilla name on Mumbo's Mountain (B:6 T:0 -> correct: CONGA)
- * DE: "HEISST ER NICHT GODZILLA, / AUF MUMBO'S MOUNTAIN, / DER GORILLA?"
+ * DE: "HEISST ER NICHT GODZILLA, / AUF MONTA\xD1" "A DE MUMBO, / DER GORILLA?"
  * ============================================================ */
 static DialogLine _1225_b[] = {
     { 0x80, "\xBF" "NO SE LLAMA GODZILLA" },
-    { 0x80, "EL GORILA EN MUMBO'S" },
-    { 0x80, "MOUNTAIN, ESA PANDILLA?" },
+    { 0x80, "EL GORILA EN MONTA\xD1" "A" },
+    { 0x80, "DE MUMBO, ESA PANDILLA?" },
     { 0x81, "CONGA" },
     { 0x82, "BONGA" },
     { 0x83, "WONGA" },
@@ -335,12 +335,12 @@ static DialogLine _1225_t[] = {
 
 /* ============================================================
  * 0x1226 - New move on Mumbo's Mountain (B:6 T:0 -> correct: HUCKEPACK-LAUF/Talon Trot)
- * DE: "SEI NICHT SO SCHEU, / WELCHER MOVE WAR AUF / MUMBO'S MOUNTAIN NEU?"
+ * DE: "SEI NICHT SO SCHEU, / WELCHER MOVE WAR AUF / MONTA\xD1" "A DE MUMBO NEU?"
  * ============================================================ */
 static DialogLine _1226_b[] = {
     { 0x80, "NO SEAS TAN COBARDE," },
-    { 0x80, "\xBF" "QU\xC9 MOVIMIENTO EN MUMBO'S" },
-    { 0x80, "MOUNTAIN ERA NUEVO AQUELLA TARDE?" },
+    { 0x80, "\xBF" "QU\xC9 MOVIMIENTO EN MONTA\xD1" "A" },
+    { 0x80, "DE MUMBO ERA NUEVO AQUELLA TARDE?" },
     { 0x81, "TROTE DE GARRAS" },
     { 0x82, "VUELO MAGN\xCD" "FICO" },
     { 0x83, "SALTO MORTAL" },
@@ -351,11 +351,11 @@ static DialogLine _1226_t[] = {
 
 /* ============================================================
  * 0x1227 - Which creature at TTC in posture? (B:6 T:0 -> correct: RIESENKRABBE/crab)
- * DE: "WELCHE KREATUR BRINGT / SICH AN DER TREASURE / TROVE COVE IN POSITUR?"
+ * DE: "WELCHE KREATUR BRINGT / SICH AN DER CALA DEL TESORO / TROVE COVE IN POSITUR?"
  * ============================================================ */
 static DialogLine _1227_b[] = {
     { 0x80, "\xBF" "QU\xC9 CRIATURA SE PONE" },
-    { 0x80, "EN POSTURA EN TREASURE" },
+    { 0x80, "EN POSTURA EN CALA DEL TESORO" },
     { 0x80, "TROVE COVE, EL BRIB\xD3N?" },
     { 0x81, "UN CANGREJO GIGANTE" },
     { 0x82, "UNA LANGOSTA GIGANTE" },
@@ -367,10 +367,10 @@ static DialogLine _1227_t[] = {
 
 /* ============================================================
  * 0x1228 - Where is there NO Jinjo at TTC (B:6 T:0 -> correct: SCHATZTRUHE/in a chest)
- * DE: "AN DER TREASURE TROVE / COVE, AN EINEM ORT, IST / KEIN JINJO DORT!"
+ * DE: "AN DER CALA DEL TESORO TROVE / COVE, AN EINEM ORT, IST / KEIN JINJO DORT!"
  * ============================================================ */
 static DialogLine _1228_b[] = {
-    { 0x80, "EN TREASURE TROVE COVE," },
+    { 0x80, "EN CALA DEL TESORO," },
     { 0x80, "EN UN LUGAR NO HABR\xC1" },
     { 0x80, "\xA1" "JINJO QUE HALLAR\xC1S!" },
     { 0x81, "EN UN COFRE DEL TESORO" },
@@ -383,11 +383,11 @@ static DialogLine _1228_t[] = {
 
 /* ============================================================
  * 0x1229 - Why does the old captain at TTC cry? (B:6 T:0 -> correct: lost gold)
- * DE: "DER ALTE KAPITÄN AN DER / TREASURE TROVE COVE, / WARUM HEULT ER? GÄHN!"
+ * DE: "DER ALTE KAPITÄN AN DER / CALA DEL TESORO, / WARUM HEULT ER? GÄHN!"
  * ============================================================ */
 static DialogLine _1229_b[] = {
     { 0x80, "EL VIEJO CAPIT\xC1N EN" },
-    { 0x80, "TREASURE TROVE COVE," },
+    { 0x80, "CALA DEL TESORO," },
     { 0x80, "\xBF" "POR QU\xC9 LLORA? \xA1" "BOSTEZAR\xC1S!" },
     { 0x81, "PERDI\xD3 SU ORO" },
     { 0x82, "TEN\xCD" "A SED" },
@@ -399,11 +399,11 @@ static DialogLine _1229_t[] = {
 
 /* ============================================================
  * 0x122A - Who do you flee from at TTC? (B:7 T:0 -> correct: SNIPPET, DIE KRABBE)
- * DE: "VOR WEM MUSS MAN AN DER / TREASURE TROVE COVE / FLITZEN? WER WILL DORT / DAS GEPÄCK STIBITZEN?"
+ * DE: "VOR WEM MUSS MAN AN DER / CALA DEL TESORO / FLITZEN? WER WILL DORT / DAS GEPÄCK STIBITZEN?"
  * ============================================================ */
 static DialogLine _122a_b[] = {
     { 0x80, "\xBF" "DE QUI\xC9N DEBES HUIR EN" },
-    { 0x80, "TREASURE TROVE COVE" },
+    { 0x80, "CALA DEL TESORO" },
     { 0x80, "CORRIENDO? \xBF" "QUI\xC9N QUIERE" },
     { 0x80, "ROBARTE ALL\xCD MORDIENDO?" },
     { 0x81, "YUM-YUM, LA ALMEJA" },
@@ -416,12 +416,12 @@ static DialogLine _122a_t[] = {
 
 /* ============================================================
  * 0x122B - Name of bucket with hole at TTC (B:7 T:0 -> correct: LEAKY)
- * DE: "ICH WOLLTE WISSEN NOCH, / WIE HEISST AN DER / TREASURE TROVE COVE DER / EIMER MIT LOCH?"
+ * DE: "ICH WOLLTE WISSEN NOCH, / WIE HEISST AN DER / CALA DEL TESORO DER / EIMER MIT LOCH?"
  * ============================================================ */
 static DialogLine _122b_b[] = {
     { 0x80, "YO QUER\xCD" "A SABER A\xDA" "N," },
     { 0x80, "\xBF" "C\xD3MO SE LLAMA EN" },
-    { 0x80, "TREASURE TROVE COVE EL" },
+    { 0x80, "CALA DEL TESORO EL" },
     { 0x80, "CUBO CON AGUJERO COM\xDA" "N?" },
     { 0x81, "LEAKY" },
     { 0x82, "MR. EIMER" },
@@ -433,12 +433,12 @@ static DialogLine _122b_t[] = {
 
 /* ============================================================
  * 0x122C - Item easily reached at TTC (B:7 T:0 -> correct: ROTE FEDERN/red feathers)
- * DE: "WELCHER GEGENSTAND, GANZ / LEICHT, IST AN DER / TREASURE TROVE COVE / SOFORT ERREICHT?"
+ * DE: "WELCHER GEGENSTAND, GANZ / LEICHT, IST AN DER / CALA DEL TESORO / SOFORT ERREICHT?"
  * ============================================================ */
 static DialogLine _122c_b[] = {
     { 0x80, "\xBF" "QU\xC9 OBJETO, MUY SENCILLO," },
-    { 0x80, "EN TREASURE TROVE" },
-    { 0x80, "COVE SE ALCANZA AL" },
+    { 0x80, "EN CALA DEL TESORO" },
+    { 0x80, "SE ALCANZA AL" },
     { 0x80, "LLEGAR, COMO UN CEPILLO?" },
     { 0x81, "PLUMAS ROJAS" },
     { 0x82, "PLUMAS DORADAS" },
@@ -450,10 +450,10 @@ static DialogLine _122c_t[] = {
 
 /* ============================================================
  * 0x122D - Name of boat at TTC (B:6 T:0 -> correct: THE SALTY HIPPO)
- * DE: "AN DER TREASURE TROVE / COVE LIEGT EIN BOOT, WIE / IST DER NAME, OHNE NOT?"
+ * DE: "AN DER CALA DEL TESORO TROVE / COVE LIEGT EIN BOOT, WIE / IST DER NAME, OHNE NOT?"
  * ============================================================ */
 static DialogLine _122d_b[] = {
-    { 0x80, "EN TREASURE TROVE COVE" },
+    { 0x80, "EN CALA DEL TESORO" },
     { 0x80, "HAY UN BARCO, \xBF" "SU NOMBRE" },
     { 0x80, "CU\xC1L SER\xC1 SIN APURO?" },
     { 0x81, "THE SALTY HIPPO" },
@@ -466,12 +466,12 @@ static DialogLine _122d_t[] = {
 
 /* ============================================================
  * 0x122E - Name of shark at TTC (B:7 T:0 -> correct: SNACKER)
- * DE: "WIE HEISST DENN NUN DER / HAI, DER AN DER TREASURE / TROVE COVE SCHWIMMT / VORBEI?"
+ * DE: "WIE HEISST DENN NUN DER / HAI, DER AN DER CALA DEL TESORO / TROVE COVE SCHWIMMT / VORBEI?"
  * ============================================================ */
 static DialogLine _122e_b[] = {
     { 0x80, "\xBF" "C\xD3MO SE LLAMA ENTONCES" },
-    { 0x80, "EL TIBUR\xD3N EN TREASURE" },
-    { 0x80, "TROVE COVE QUE NADA" },
+    { 0x80, "EL TIBUR\xD3N EN CALA" },
+    { 0x80, "DEL TESORO QUE NADA" },
     { 0x80, "SIN TROPEZONES?" },
     { 0x81, "SNACKER" },
     { 0x82, "SLACKER" },
@@ -483,10 +483,10 @@ static DialogLine _122e_t[] = {
 
 /* ============================================================
  * 0x122F - How many X at TTC (B:6 T:0 -> correct: 6)
- * DE: "AN DER TREASURE TROVE / COVE, DIE SCHATZJAGD, / WIEVIELE X STEHEN PARAT?"
+ * DE: "AN DER CALA DEL TESORO TROVE / COVE, DIE SCHATZJAGD, / WIEVIELE X STEHEN PARAT?"
  * ============================================================ */
 static DialogLine _122f_b[] = {
-    { 0x80, "EN TREASURE TROVE COVE," },
+    { 0x80, "EN CALA DEL TESORO," },
     { 0x80, "LA B\xDA" "SQUEDA DEL TESORO," },
     { 0x80, "\xBF" "CU\xC1NTAS X HAY EN TOTAL?" },
     { 0x81, "6" },
@@ -499,11 +499,11 @@ static DialogLine _122f_t[] = {
 
 /* ============================================================
  * 0x1230 - Missing letter on TTC floor (B:5 T:0 -> correct: X)
- * DE: "AM BODEN DER SANDBURG / AN DER TREASURE TROVE COVE, DA FEHLT EIN BUCHSTABE. WELCHER IST ES, MEIN KNABE?"
+ * DE: "AM BODEN DER SANDBURG / AN DER CALA DEL TESORO, DA FEHLT EIN BUCHSTABE. WELCHER IST ES, MEIN KNABE?"
  * ============================================================ */
 static DialogLine _1230_b[] = {
     { 0x80, "EN EL SUELO DEL CASTILLO" },
-    { 0x80, "EN TREASURE TROVE COVE FALTA UNA LETRA. \xBF" "CU\xC1L ES, PATOSO MOZO PILLASTRE?" },
+    { 0x80, "EN CALA DEL TESORO FALTA UNA LETRA. \xBF" "CU\xC1L ES, PATOSO MOZO PILLASTRE?" },
     { 0x81, "Q" },
     { 0x82, "NINGUNA" },
     { 0x83, "X" },
@@ -514,10 +514,10 @@ static DialogLine _1230_t[] = {
 
 /* ============================================================
  * 0x1231 - How many links does the whale chain have in CC? (B:7 T:0 -> correct: 8)
- * DE: "IN CLANKER'S CAVERN, DIE / FRAGE KOMMT WIEDER, DIE / KETTE DES WALES HAT / WIEVIELE GLIEDER?"
+ * DE: "IN CAVERNA DE CLANKER, DIE / FRAGE KOMMT WIEDER, DIE / KETTE DES WALES HAT / WIEVIELE GLIEDER?"
  * ============================================================ */
 static DialogLine _1231_b[] = {
-    { 0x80, "EN CLANKER'S CAVERN, LA" },
+    { 0x80, "EN CAVERNA DE CLANKER, LA" },
     { 0x80, "PREGUNTA VUELVE A SONAR," },
     { 0x80, "\xBF" "LA CADENA DE LA BALLENA" },
     { 0x80, "CU\xC1NTOS ESLABONES TENDR\xC1?" },
@@ -547,12 +547,12 @@ static DialogLine _1232_t[] = {
 
 /* ============================================================
  * 0x1233 - What's at bottom of Clanker's chain? (B:7 T:0 -> correct: EIN AMBOSS/anvil)
- * DE: "STELLE DICH NICHT SO AN, / WAS IST UNTEN IN / CLANKER'S CAVERN AN / CLANKERS KETTE DRAN?"
+ * DE: "STELLE DICH NICHT SO AN, / WAS IST UNTEN IN / CAVERNA DE CLANKER AN / CLANKERS KETTE DRAN?"
  * ============================================================ */
 static DialogLine _1233_b[] = {
     { 0x80, "NO TE HAGAS EL TONTO," },
     { 0x80, "\xBF" "QU\xC9 HAY ABAJO EN" },
-    { 0x80, "CLANKER'S CAVERN EN" },
+    { 0x80, "CAVERNA DE CLANKER EN" },
     { 0x80, "LA CADENA, PRONTO?" },
     { 0x81, "UN YUNQUE" },
     { 0x82, "UNA ROCA" },
@@ -564,11 +564,11 @@ static DialogLine _1233_t[] = {
 
 /* ============================================================
  * 0x1234 - Bubble fish name in CC (B:7 T:0 -> correct: GLOOP)
- * DE: "DER BLUBBERBLASENFISCH / IN CLANKER'S CAVERN, DER / ZAHME, WIE IST SEIN / NAME?"
+ * DE: "DER BLUBBERBLASENFISCH / IN CAVERNA DE CLANKER, DER / ZAHME, WIE IST SEIN / NAME?"
  * ============================================================ */
 static DialogLine _1234_b[] = {
     { 0x80, "EL PEZ DE BURBUJAS EN" },
-    { 0x80, "CLANKER'S CAVERN, EL" },
+    { 0x80, "CAVERNA DE CLANKER, EL" },
     { 0x80, "MANSITO, \xBF" "C\xD3MO SE LLAMA" },
     { 0x80, "ESE BONITO?" },
     { 0x81, "GLOOP" },
@@ -585,7 +585,7 @@ static DialogLine _1234_t[] = {
  * ============================================================ */
 static DialogLine _1235_b[] = {
     { 0x80, "\xBF" "POR D\xD3NDE NADASTE EN" },
-    { 0x80, "CLANKER'S CAVERN AQUEL D\xCD" "A," },
+    { 0x80, "CAVERNA DE CLANKER AQUEL D\xCD" "A," },
     { 0x80, "PARA QUE LA BALLENA" },
     { 0x80, "M\xC1S AIRE CONSEGU\xCD" "A?" },
     { 0x81, "UNA LLAVE ENORME" },
@@ -598,10 +598,10 @@ static DialogLine _1235_t[] = {
 
 /* ============================================================
  * 0x1236 - Object shot from whale blowhole in CC (B:6 T:0 -> correct: EIN BOLZEN/bolt)
- * DE: "IN CLANKER'S CAVERN / SCHOSS EIN OBJEKT AUS DES WALES LUFTLOCH, / WAS WAR DAS NOCH?"
+ * DE: "IN CAVERNA DE CLANKER / SCHOSS EIN OBJEKT AUS DES WALES LUFTLOCH, / WAS WAR DAS NOCH?"
  * ============================================================ */
 static DialogLine _1236_b[] = {
-    { 0x80, "EN CLANKER'S CAVERN" },
+    { 0x80, "EN CAVERNA DE CLANKER" },
     { 0x80, "UN OBJETO SALI\xD3 DEL ORIFICIO DE LA BALLENA VELOZ," },
     { 0x80, "\xBF" "QU\xC9 ERA, AUDAZ?" },
     { 0x81, "UN PERNO" },
@@ -614,12 +614,12 @@ static DialogLine _1236_t[] = {
 
 /* ============================================================
  * 0x1237 - Notable thing in CC catches your eye? (B:6 T:0 -> correct: HAMMER)
- * DE: "WELCHES MERKWÜRDIGE DING / DEINEN BLICK IN / CLANKER'S CAVERN FING?"
+ * DE: "WELCHES MERKWÜRDIGE DING / DEINEN BLICK IN / CAVERNA DE CLANKER FING?"
  * ============================================================ */
 static DialogLine _1237_b[] = {
     { 0x80, "\xBF" "QU\xC9 COSA PECULIAR" },
-    { 0x80, "TU MIRADA EN CLANKER'S" },
-    { 0x80, "CAVERN LOGR\xD3 ATRAPAR?" },
+    { 0x80, "TU MIRADA EN CAVERNA" },
+    { 0x80, "DE CLANKER LOGR\xD3 ATRAPAR?" },
     { 0x81, "MARTILLO" },
     { 0x82, "TORNILLO" },
     { 0x83, "YUNQUE" },
@@ -635,7 +635,7 @@ static DialogLine _1237_t[] = {
 static DialogLine _1238_b[] = {
     { 0x80, "DIME R\xC1PIDO EL N\xDA" "MERO," },
     { 0x80, "\xBF" "CU\xC1NTOS CAMINOS LLEVAN" },
-    { 0x80, "EN CLANKER'S CAVERN" },
+    { 0x80, "EN CAVERNA DE CLANKER" },
     { 0x80, "A LA BALLENA, MAJADERO?" },
     { 0x81, "M\xC1S DE 4" },
     { 0x82, "MENOS DE 5" },
@@ -679,10 +679,10 @@ static DialogLine _123a_t[] = {
 
 /* ============================================================
  * 0x123B - What was in the BGS egg when it broke? (B:5 T:0 -> correct: EXTRALEBEN)
- * DE: "IM BUBBLEGLOOP SWAMP, DAS EI, / WAS WAR NICHT DARIN, ALS ES BRACH ENTZWEI?"
+ * DE: "IM PANTANO BUBBLEGLOOP, DAS EI, / WAS WAR NICHT DARIN, ALS ES BRACH ENTZWEI?"
  * ============================================================ */
 static DialogLine _123b_b[] = {
-    { 0x80, "EN BUBBLEGLOOP SWAMP, EL HUEVO QUE SE ROMPI\xD3," },
+    { 0x80, "EN PANTANO BUBBLEGLOOP, EL HUEVO QUE SE ROMPI\xD3," },
     { 0x80, "\xBF" "QU\xC9 NO HAB\xCD" "A DENTRO CUANDO SE PARTI\xD3?" },
     { 0x81, "UNA VIDA EXTRA" },
     { 0x82, "UN PUZLE" },
@@ -697,8 +697,8 @@ static DialogLine _123b_t[] = {
  * DE: "ALS ES IM BUBBLEGLOOP / SWAMP HAT GEFUNKT, WAS / WAR DORT AUF DEM / HÖCHSTEN PUNKT?"
  * ============================================================ */
 static DialogLine _123c_b[] = {
-    { 0x80, "CUANDO EN BUBBLEGLOOP" },
-    { 0x80, "SWAMP TODO BRILL\xD3," },
+    { 0x80, "CUANDO EN PANTANO" },
+    { 0x80, "BUBBLEGLOOP TODO BRILL\xD3," },
     { 0x80, "\xBF" "QU\xC9 HAB\xCD" "A EN EL PUNTO" },
     { 0x80, "M\xC1S ALTO DE ALL\xCD?" },
     { 0x81, "UNA CABA\xD1" "A VIEJA" },
@@ -711,11 +711,11 @@ static DialogLine _123c_t[] = {
 
 /* ============================================================
  * 0x123D - What to jump on for turtles in BGS (B:5 T:0 -> correct: AUF IHRE FÜSSE/their feet)
- * DE: "WORAUF MUSSTEST DU HÜPFEN, / UM IM BUBBLEGLOOP SWAMP IN DIE SCHILDKRÖTE ZU SCHLÜPFEN?"
+ * DE: "WORAUF MUSSTEST DU HÜPFEN, / UM IM PANTANO BUBBLEGLOOP IN DIE SCHILDKRÖTE ZU SCHLÜPFEN?"
  * ============================================================ */
 static DialogLine _123d_b[] = {
     { 0x80, "\xBF" "SOBRE QU\xC9 TUVISTE QUE SALTAR" },
-    { 0x80, "PARA EN BUBBLEGLOOP SWAMP EN LA TORTUGA PODER ENTRAR?" },
+    { 0x80, "PARA EN PANTANO BUBBLEGLOOP EN LA TORTUGA PODER ENTRAR?" },
     { 0x81, "SOBRE SUS PIES" },
     { 0x82, "SOBRE SU CABEZA" },
     { 0x83, "SOBRE SU TRASERO" },
@@ -726,12 +726,12 @@ static DialogLine _123d_t[] = {
 
 /* ============================================================
  * 0x123E - How many turtles in BGS (B:6 T:0 -> correct: 8)
- * DE: "ERINNERST DU DICH, / WIEVIELE SCHILDKRÖTEN IM / BUBBLEGLOOP SWAMP BEFANDEN SICH?"
+ * DE: "ERINNERST DU DICH, / WIEVIELE SCHILDKRÖTEN IM / PANTANO BUBBLEGLOOP BEFANDEN SICH?"
  * ============================================================ */
 static DialogLine _123e_b[] = {
     { 0x80, "\xBF" "TE ACUERDAS T\xDA," },
     { 0x80, "CU\xC1NTAS TORTUGAS EN" },
-    { 0x80, "BUBBLEGLOOP SWAMP HAB\xCD" "A, AVESTRUZ?" },
+    { 0x80, "PANTANO BUBBLEGLOOP HAB\xCD" "A, AVESTRUZ?" },
     { 0x81, "8" },
     { 0x82, "6" },
     { 0x83, "7" },
@@ -742,10 +742,10 @@ static DialogLine _123e_t[] = {
 
 /* ============================================================
  * 0x123F - Biggest bear-haters in BGS water (B:6 T:0 -> correct: PIRANHAS)
- * DE: "IM BUBBLEGLOOP SWAMP, / IM WASSER, WER SIND DORT / DIE GRÖSSTEN BÄRENHASSER?"
+ * DE: "IM PANTANO BUBBLEGLOOP, / IM WASSER, WER SIND DORT / DIE GRÖSSTEN BÄRENHASSER?"
  * ============================================================ */
 static DialogLine _123f_b[] = {
-    { 0x80, "EN BUBBLEGLOOP SWAMP," },
+    { 0x80, "EN PANTANO BUBBLEGLOOP," },
     { 0x80, "EN EL AGUA, \xBF" "QUI\xC9N ODIA" },
     { 0x80, "A LOS OSOS CON M\xC1S SA\xD1" "A?" },
     { 0x81, "PIRA\xD1" "AS" },
@@ -758,12 +758,12 @@ static DialogLine _123f_t[] = {
 
 /* ============================================================
  * 0x1240 - True statement about BGS (B:9 T:0 -> correct: BOTTLES + 2 MOVES)
- * DE: "KANNST DU MIR SAGEN, / SONNENKLAR, WELCHE / AUSSAGE ÜBER DEN BUBBLEGLOOP SWAMP IST WAHR?"
+ * DE: "KANNST DU MIR SAGEN, / SONNENKLAR, WELCHE / AUSSAGE ÜBER DEN PANTANO BUBBLEGLOOP IST WAHR?"
  * ============================================================ */
 static DialogLine _1240_b[] = {
     { 0x80, "\xBF" "PUEDES DECIRME CON RAZ\xD3N" },
     { 0x80, "QU\xC9 AFIRMACI\xD3N SOBRE" },
-    { 0x80, "BUBBLEGLOOP SWAMP ES VERDAD, BRIB\xD3N?" },
+    { 0x80, "PANTANO BUBBLEGLOOP ES VERDAD, BRIB\xD3N?" },
     { 0x81, "BOTTLES ENSE\xD1" "A DOS NUEVOS" },
     { 0x81, "MOVIMIENTOS" },
     { 0x82, "HAY DOS COCODRILOS" },
@@ -777,11 +777,11 @@ static DialogLine _1240_t[] = {
 
 /* ============================================================
  * 0x1241 - Notable thing in BGS (B:6 T:0 -> correct: GRÜNER FROSCH/yellow frog)
- * DE: "WELCHES MERKWÜRDIGE DING / IM BUBBLEGLOOP SWAMP / DEINE BLICKE FING?"
+ * DE: "WELCHES MERKWÜRDIGE DING / IM PANTANO BUBBLEGLOOP / DEINE BLICKE FING?"
  * ============================================================ */
 static DialogLine _1241_b[] = {
     { 0x80, "\xBF" "QU\xC9 COSA EXTRA\xD1" "A EN" },
-    { 0x80, "BUBBLEGLOOP SWAMP TU" },
+    { 0x80, "PANTANO BUBBLEGLOOP TU" },
     { 0x80, "MIRADA ATRAJO CON GA\xD1" "A?" },
     { 0x81, "UNA RANA VERDE" },
     { 0x82, "UNA RANA ROJA" },
@@ -793,12 +793,12 @@ static DialogLine _1241_t[] = {
 
 /* ============================================================
  * 0x1242 - Frogs name in BGS (B:6 T:0 -> correct: FLIBBITS)
- * DE: "SEI NICHT SO DUMPF, WIE / HEISSEN DIE FRÖSCHE IM / BUBBLEGLOOP SWAMP, DEM DÜSTEREN SUMPF?"
+ * DE: "SEI NICHT SO DUMPF, WIE / HEISSEN DIE FRÖSCHE IM / PANTANO BUBBLEGLOOP, DEM DÜSTEREN SUMPF?"
  * ============================================================ */
 static DialogLine _1242_b[] = {
     { 0x80, "NO SEAS TAN BOBO," },
     { 0x80, "\xBF" "C\xD3MO SE LLAMAN LAS RANAS EN" },
-    { 0x80, "BUBBLEGLOOP SWAMP, EL PANTANO SOMBROSO Y PLOBO?" },
+    { 0x80, "PANTANO BUBBLEGLOOP, EL PANTANO SOMBROSO Y PLOBO?" },
     { 0x81, "FLIBBITS" },
     { 0x82, "STIKKITS" },
     { 0x83, "STICKUPS" },
@@ -825,10 +825,10 @@ static DialogLine _1243_t[] = {
 
 /* ============================================================
  * 0x1244 - What decorates toad armor in BGS (B:5 T:0 -> correct: MUSIKNOTE/music note)
- * DE: "IM BUBBLEGLOOP SWAMP, DA SINGT EIN CHOR OHNE FLÖTEN, / WAS ZIERT DEN PANZER DER KRÖTEN?"
+ * DE: "IM PANTANO BUBBLEGLOOP, DA SINGT EIN CHOR OHNE FLÖTEN, / WAS ZIERT DEN PANZER DER KRÖTEN?"
  * ============================================================ */
 static DialogLine _1244_b[] = {
-    { 0x80, "EN BUBBLEGLOOP SWAMP CANTAN SAPOS SIN FLAUTA CON EMOCI\xD3N," },
+    { 0x80, "EN PANTANO BUBBLEGLOOP CANTAN SAPOS SIN FLAUTA CON EMOCI\xD3N," },
     { 0x80, "\xBF" "QU\xC9 ADORNA EL CAPARAZ\xD3N DE CADA SAPOTE BRIB\xD3N?" },
     { 0x81, "UNA NOTA MUSICAL" },
     { 0x82, "UNA DIANA" },
@@ -856,12 +856,12 @@ static DialogLine _1245_t[] = {
 
 /* ============================================================
  * 0x1246 - What is NOT in Freezeezy Peak? (B:6 T:0 -> correct: WEIHNACHTSSTOLLEN/Christmas stollen)
- * DE: "ICH SPÜRE HEUTE GICHT, / WAS GIBT ES IN / FREEZEEZY PEAK NICHT?"
+ * DE: "ICH SPÜRE HEUTE GICHT, / WAS GIBT ES IN / PICO FREEZEEZY NICHT?"
  * ============================================================ */
 static DialogLine _1246_b[] = {
     { 0x80, "HOY SIENTO MUCHO FR\xCD" "O," },
     { 0x80, "\xBF" "QU\xC9 NO EXISTE EN" },
-    { 0x80, "FREEZEEZY PEAK, BALD\xCD" "O?" },
+    { 0x80, "PICO FREEZEEZY, BALD\xCD" "O?" },
     { 0x81, "PAN DE NAVIDAD" },
     { 0x82, "REGALOS DE NAVIDAD" },
     { 0x83, "\xC1RBOL DE NAVIDAD" },
@@ -872,10 +872,10 @@ static DialogLine _1246_t[] = {
 
 /* ============================================================
  * 0x1247 - Who climbed summit in FP? (B:8 T:0 -> correct: FÜNF BÄREN/five bears)
- * DE: "WER IN FREEZEEZY PEAK / DEN GIPFEL ERKLIMMT, DER / WEISS AUCH, WELCHE / AUSSAGE HIER STIMMT!"
+ * DE: "WER IN PICO FREEZEEZY / DEN GIPFEL ERKLIMMT, DER / WEISS AUCH, WELCHE / AUSSAGE HIER STIMMT!"
  * ============================================================ */
 static DialogLine _1247_b[] = {
-    { 0x80, "QUIEN EN FREEZEEZY PEAK" },
+    { 0x80, "QUIEN EN PICO FREEZEEZY" },
     { 0x80, "LA CIMA ESCAL\xD3, SABE" },
     { 0x80, "TAMBI\xC9N QU\xC9 FRASE" },
     { 0x80, "\xA1" "AQU\xCD ES VERDAD, CALAMIDAD!" },
@@ -890,11 +890,11 @@ static DialogLine _1247_t[] = {
 
 /* ============================================================
  * 0x1248 - What cheers up sad bears in FP? (B:7 T:0 -> correct: GESCHENKE/presents)
- * DE: "DIE KLEINEN BÄREN IN / FREEZEEZY PEAK TRAUERN / SO, WOMIT MACHST DU / SIE WIEDER FROH?"
+ * DE: "DIE KLEINEN BÄREN IN / PICO FREEZEEZY TRAUERN / SO, WOMIT MACHST DU / SIE WIEDER FROH?"
  * ============================================================ */
 static DialogLine _1248_b[] = {
-    { 0x80, "LOS OSITOS EN FREEZEEZY" },
-    { 0x80, "PEAK LLORAN A RAUDAL," },
+    { 0x80, "LOS OSITOS EN PICO" },
+    { 0x80, "FREEZEEZY LLORAN A RAUDAL," },
     { 0x80, "\xBF" "CON QU\xC9 LOS HACES" },
     { 0x80, "FELICES DE VERDAD?" },
     { 0x81, "REGALOS" },
@@ -907,11 +907,11 @@ static DialogLine _1248_t[] = {
 
 /* ============================================================
  * 0x1249 - Color of snowman's scarf in FP (B:7 T:0 -> correct: GELB UND ROT/yellow&red)
- * DE: "DER SCHNEEMANN STEHT IN / FREEZEEZY PEAK IM TAL, / WELCHE FARBE HAT SEIN / SCHAL?"
+ * DE: "DER SCHNEEMANN STEHT IN / PICO FREEZEEZY IM TAL, / WELCHE FARBE HAT SEIN / SCHAL?"
  * ============================================================ */
 static DialogLine _1249_b[] = {
     { 0x80, "EL MU\xD1" "ECO DE NIEVE EST\xC1" },
-    { 0x80, "EN FREEZEEZY PEAK SIN PAR," },
+    { 0x80, "EN PICO FREEZEEZY SIN PAR," },
     { 0x80, "\xBF" "DE QU\xC9 COLOR ES SU" },
     { 0x80, "BUFANDA SINGULAR?" },
     { 0x81, "AMARILLO Y ROJO" },
@@ -924,10 +924,10 @@ static DialogLine _1249_t[] = {
 
 /* ============================================================
  * 0x124A - What does snowman hold in FP (B:5 T:0 -> correct: EINEN BESEN/a broom)
- * DE: "IN FREEZEEZY PEAK, IM SCHNEEBEDECKTEN LAND, / WAS HÄLT DER SCHNEEMANN IN DER HAND?"
+ * DE: "IN PICO FREEZEEZY, IM SCHNEEBEDECKTEN LAND, / WAS HÄLT DER SCHNEEMANN IN DER HAND?"
  * ============================================================ */
 static DialogLine _124a_b[] = {
-    { 0x80, "EN FREEZEEZY PEAK, TIERRA DE NIEVE SIN IGUAL," },
+    { 0x80, "EN PICO FREEZEEZY, TIERRA DE NIEVE SIN IGUAL," },
     { 0x80, "\xBF" "QU\xC9 SOSTIENE EL MU\xD1" "ECO DE NIEVE INVERNAL?" },
     { 0x81, "UNA ESCOBA" },
     { 0x82, "UNA GAME BOY CAMERA" },
@@ -939,10 +939,10 @@ static DialogLine _124a_t[] = {
 
 /* ============================================================
  * 0x124B - Boggy the bear in FP, how many puzzles? (B:6 T:0 -> correct: DREI/3)
- * DE: "IN FREEZEEZY PEAK LEBT / BOGGY, DER BÄR, WIEVIELE / PUZZLETEILE HAT ER?"
+ * DE: "IN PICO FREEZEEZY LEBT / BOGGY, DER BÄR, WIEVIELE / PUZZLETEILE HAT ER?"
  * ============================================================ */
 static DialogLine _124b_b[] = {
-    { 0x80, "EN FREEZEEZY PEAK VIVE" },
+    { 0x80, "EN PICO FREEZEEZY VIVE" },
     { 0x80, "BOGGY, EL OSO, \xBF" "CU\xC1NTOS" },
     { 0x80, "PUZLES TIENE ESE GRASOSO?" },
     { 0x81, "TRES" },
@@ -955,10 +955,10 @@ static DialogLine _124b_t[] = {
 
 /* ============================================================
  * 0x124C - Slalom in FP, how many gates? (B:6 T:0 -> correct: 38)
- * DE: "IN FREEZEEZY PEAK, DAS / SLALOMRENNEN, DEN WEG / DURCH WIEVIELE TORE MUSST DU KENNEN?"
+ * DE: "IN PICO FREEZEEZY, DAS / SLALOMRENNEN, DEN WEG / DURCH WIEVIELE TORE MUSST DU KENNEN?"
  * ============================================================ */
 static DialogLine _124c_b[] = {
-    { 0x80, "EN FREEZEEZY PEAK, LA" },
+    { 0x80, "EN PICO FREEZEEZY, LA" },
     { 0x80, "CARRERA DE ESLALON," },
     { 0x80, "\xBF" "POR CU\xC1NTAS PUERTAS PASAS SIN PERD\xD3N?" },
     { 0x81, "38" },
@@ -971,10 +971,10 @@ static DialogLine _124c_t[] = {
 
 /* ============================================================
  * 0x124D - How many bears fit in the FP igloo? (B:7 T:0 -> correct: FÜNF/5)
- * DE: "IN FREEZEEZY PEAK, DA / STEHT EIN IGLU FEIN, / WIEVIELE BÄREN PASSEN / HINEIN?"
+ * DE: "IN PICO FREEZEEZY, DA / STEHT EIN IGLU FEIN, / WIEVIELE BÄREN PASSEN / HINEIN?"
  * ============================================================ */
 static DialogLine _124d_b[] = {
-    { 0x80, "EN FREEZEEZY PEAK HAY" },
+    { 0x80, "EN PICO FREEZEEZY HAY" },
     { 0x80, "UN IGL\xDA FINO Y ELEGANTE," },
     { 0x80, "\xBF" "CU\xC1NTOS OSOS CABEN" },
     { 0x80, "DENTRO, IGNORANTE?" },
@@ -988,10 +988,10 @@ static DialogLine _124d_t[] = {
 
 /* ============================================================
  * 0x124E - Walrus name in FP (B:6 T:0 -> correct: WOZZA)
- * DE: "IN FREEZEEZY PEAK EIN / WALROSS LEBT, WELCHEN / NAMEN ES DENN TRÄGT?"
+ * DE: "IN PICO FREEZEEZY EIN / WALROSS LEBT, WELCHEN / NAMEN ES DENN TRÄGT?"
  * ============================================================ */
 static DialogLine _124e_b[] = {
-    { 0x80, "EN FREEZEEZY PEAK UNA" },
+    { 0x80, "EN PICO FREEZEEZY UNA" },
     { 0x80, "MORSA VIVIR\xC1, \xBF" "QU\xC9" },
     { 0x80, "NOMBRE LLEVAR\xC1?" },
     { 0x81, "WOZZA" },
@@ -1004,12 +1004,12 @@ static DialogLine _124e_t[] = {
 
 /* ============================================================
  * 0x124F - How many pyramids in GV (B:6 T:0 -> correct: 4)
- * DE: "KANNST DU SEHEN, / WIEVIELE PYRAMIDEN IN / GOBI'S VALLEY STEHEN?"
+ * DE: "KANNST DU SEHEN, / WIEVIELE PYRAMIDEN IN / VALLE DE GOBI STEHEN?"
  * ============================================================ */
 static DialogLine _124f_b[] = {
     { 0x80, "\xBF" "PUEDES VER BIEN," },
     { 0x80, "CU\xC1NTAS PIR\xC1MIDES EN" },
-    { 0x80, "GOBI'S VALLEY HAY, SOPLAMOQUITOS?" },
+    { 0x80, "VALLE DE GOBI HAY, SOPLAMOQUITOS?" },
     { 0x81, "4" },
     { 0x82, "3" },
     { 0x83, "5" },
@@ -1020,12 +1020,12 @@ static DialogLine _124f_t[] = {
 
 /* ============================================================
  * 0x1250 - What comes out of pyramid in GV (B:6 T:0 -> correct: WASSER)
- * DE: "WAS QUILLT, OH GRAUS, / AUS GOBIS PYRAMIDE IN / GOBI'S VALLEY HERAUS?"
+ * DE: "WAS QUILLT, OH GRAUS, / AUS GOBIS PYRAMIDE IN / VALLE DE GOBI HERAUS?"
  * ============================================================ */
 static DialogLine _1250_b[] = {
     { 0x80, "\xBF" "QU\xC9 SALE, OH QU\xC9 HORROR," },
     { 0x80, "DE LA PIR\xC1MIDE DE GOBI" },
-    { 0x80, "EN GOBI'S VALLEY, CANTOR?" },
+    { 0x80, "EN VALLE DE GOBI, CANTOR?" },
     { 0x81, "AGUA" },
     { 0x82, "ARENA" },
     { 0x83, "UNA HORDA DE MOMIAS" },
@@ -1040,8 +1040,8 @@ static DialogLine _1250_t[] = {
  * ============================================================ */
 static DialogLine _1251_b[] = {
     { 0x80, "EL NOMBRE BUSCO DE LA" },
-    { 0x80, "MANO QUE EN GOBI'S" },
-    { 0x80, "VALLEY UN PUZLE OCULTA" },
+    { 0x80, "MANO QUE EN VALLE" },
+    { 0x80, "DE GOBI UN PUZLE OCULTA" },
     { 0x80, "\xA1" "EN LA ARENA CON GANAS!" },
     { 0x81, "GRABBA, LA MANO MOMIA" },
     { 0x82, "ROBBA, LA MANO MOMIA" },
@@ -1085,11 +1085,11 @@ static DialogLine _1253_t[] = {
 
 /* ============================================================
  * 0x1254 - What can you ride in GV? (B:7 T:0 -> correct: EIN MAGISCHER TEPPICH)
- * DE: "WORAUF KANN MAN IN / GOBI'S VALLEY REITEN UND / SANFT ÜBER DEN HEISSEN / WÜSTENSAND GLEITEN?"
+ * DE: "WORAUF KANN MAN IN / VALLE DE GOBI REITEN UND / SANFT ÜBER DEN HEISSEN / WÜSTENSAND GLEITEN?"
  * ============================================================ */
 static DialogLine _1254_b[] = {
     { 0x80, "\xBF" "SOBRE QU\xC9 SE PUEDE EN" },
-    { 0x80, "GOBI'S VALLEY CABALGAR" },
+    { 0x80, "VALLE DE GOBI CABALGAR" },
     { 0x80, "Y SOBRE LA ARDIENTE" },
     { 0x80, "ARENA DESLIZAR?" },
     { 0x81, "UNA ALFOMBRA M\xC1GICA" },
@@ -1182,12 +1182,12 @@ static DialogLine _1259_t[] = {
 
 /* ============================================================
  * 0x125A - How many paths in MMM (B:6 T:0 -> correct: 9)
- * DE: "JETZT KEINE STARALLÜREN, / WIEVIELE WEGE IN MAD / MONSTER MANSION FÜHREN?"
+ * DE: "JETZT KEINE STARALLÜREN, / WIEVIELE WEGE IN MAD / MANSI\xD3N MONSTRUOSA FÜHREN?"
  * ============================================================ */
 static DialogLine _125a_b[] = {
     { 0x80, "AHORA NADA DE ESTRELLARSE," },
     { 0x80, "\xBF" "CU\xC1NTOS CAMINOS EN MAD" },
-    { 0x80, "MONSTER MANSION HAY PARA ANDARSE?" },
+    { 0x80, "MANSI\xD3N MONSTRUOSA HAY PARA ANDARSE?" },
     { 0x81, "9" },
     { 0x82, "7" },
     { 0x83, "8" },
@@ -1198,12 +1198,12 @@ static DialogLine _125a_t[] = {
 
 /* ============================================================
  * 0x125B - What's on the cemetery in MMM (B:7 T:0 -> correct: GEISTER/ghosts)
- * DE: "STELLE DICH NICHT DOOF, / WAS FINDET IN MAD / MONSTER MANSION MAN / NICHT AUF DEM FRIEDHOF?"
+ * DE: "STELLE DICH NICHT DOOF, / WAS FINDET IN MAD / MANSI\xD3N MONSTRUOSA MAN / NICHT AUF DEM FRIEDHOF?"
  * ============================================================ */
 static DialogLine _125b_b[] = {
     { 0x80, "NO TE HAGAS EL TONTO," },
     { 0x80, "\xBF" "QU\xC9 NO SE ENCUENTRA EN" },
-    { 0x80, "MAD MONSTER MANSION" },
+    { 0x80, "MANSI\xD3N MONSTRUOSA" },
     { 0x80, "EN EL CEMENTERIO, PRONTO?" },
     { 0x81, "FANTASMAS" },
     { 0x82, "FLORES" },
@@ -1232,13 +1232,13 @@ static DialogLine _125c_t[] = {
 
 /* ============================================================
  * 0x125D - What's on the barrels in MMM cellar (B:7 T:0 -> correct: '1881')
- * DE: "ICH FRESSE EINEN BESEN, / WAS IST AUF DEN FÄSSERN / IM KELLER VON MAD / MONSTER MANSION ZU LESEN?"
+ * DE: "ICH FRESSE EINEN BESEN, / WAS IST AUF DEN FÄSSERN / IM KELLER VON MAD / MANSI\xD3N MONSTRUOSA ZU LESEN?"
  * ============================================================ */
 static DialogLine _125d_b[] = {
     { 0x80, "ME COMO UNA ESCOBA," },
     { 0x80, "\xBF" "QU\xC9 SE LEE EN LOS BARRILES" },
     { 0x80, "DEL S\xD3TANO DE MAD" },
-    { 0x80, "MONSTER MANSION, GARROBO?" },
+    { 0x80, "MANSI\xD3N MONSTRUOSA, GARROBO?" },
     { 0x81, "'1881'" },
     { 0x82, "'FR\xC1GIL'" },
     { 0x83, "'\xA1" "FUERA!'" },
@@ -1249,13 +1249,13 @@ static DialogLine _125d_t[] = {
 
 /* ============================================================
  * 0x125E - What's NOT in cellar of MMM (B:7 T:0 -> correct: ROTE FEDERN/red feathers)
- * DE: "WIR SIND NICHT VOR / GERICHT, DOCH WAS FINDET / MAN IM KELLER VON MAD / MONSTER MANSION NICHT?"
+ * DE: "WIR SIND NICHT VOR / GERICHT, DOCH WAS FINDET / MAN IM KELLER VON MAD / MANSI\xD3N MONSTRUOSA NICHT?"
  * ============================================================ */
 static DialogLine _125e_b[] = {
     { 0x80, "NO ESTAMOS EN UN JUICIO," },
     { 0x80, "PERO \xBF" "QU\xC9 NO ENCUENTRAS" },
     { 0x80, "EN EL S\xD3TANO DE MAD" },
-    { 0x80, "MONSTER MANSION, NOVICIO?" },
+    { 0x80, "MANSI\xD3N MONSTRUOSA, NOVICIO?" },
     { 0x81, "PLUMAS ROJAS" },
     { 0x82, "JINJO" },
     { 0x83, "PIEZA DE PUZLE" },
@@ -1283,12 +1283,12 @@ static DialogLine _125f_t[] = {
 
 /* ============================================================
  * 0x1260 - Ghost hand name in MMM (B:7 T:0 -> correct: MOTZAND/Motzhand)
- * DE: "WIE WIRD DENN NUN DIE / MUSIKALISCHE GEISTERHAND / IN MAD MONSTER MANSION / GENANNT?"
+ * DE: "WIE WIRD DENN NUN DIE / MUSIKALISCHE GEISTERHAND / IN MANSI\xD3N MONSTRUOSA / GENANNT?"
  * ============================================================ */
 static DialogLine _1260_b[] = {
     { 0x80, "\xBF" "C\xD3MO SE LLAMA ENTONCES" },
     { 0x80, "LA MANO FANTASMA MUSICAL" },
-    { 0x80, "EN MAD MONSTER MANSION" },
+    { 0x80, "EN MANSI\xD3N MONSTRUOSA" },
     { 0x80, "LA GENIAL?" },
     { 0x81, "MOTZAND" },
     { 0x82, "STREUSAND" },
@@ -1300,12 +1300,12 @@ static DialogLine _1260_t[] = {
 
 /* ============================================================
  * 0x1261 - Clock face time in MMM (B:8 T:0 -> correct: KEINE, DIE ZEIGER SIND ABGEFALLEN/no hands)
- * DE: "SAGE MIR NUR, WELCHE / ZEIT ZEIGT IN MAD / MONSTER MANSION DAS / GESICHT DER UHR?"
+ * DE: "SAGE MIR NUR, WELCHE / ZEIT ZEIGT IN MAD / MANSI\xD3N MONSTRUOSA DAS / GESICHT DER UHR?"
  * ============================================================ */
 static DialogLine _1261_b[] = {
     { 0x80, "DIME SOLAMENTE, \xBF" "QU\xC9" },
     { 0x80, "HORA MARCA EN MAD" },
-    { 0x80, "MONSTER MANSION LA" },
+    { 0x80, "MANSI\xD3N MONSTRUOSA LA" },
     { 0x80, "CARA DEL RELOJ?" },
     { 0x81, "NINGUNA, LAS MANECILLAS" },
     { 0x81, "SE HAN CA\xCD" "DO" },
@@ -1324,7 +1324,7 @@ static DialogLine _1262_b[] = {
     { 0x80, "ESCUCHA, MI OVEJITA" },
     { 0x80, "TRAVIESA, \xBF" "QU\xC9 DESPIERTA" },
     { 0x80, "AL FANTASMA DE MAD" },
-    { 0x80, "MONSTER MANSION DEPRISA?" },
+    { 0x80, "MANSI\xD3N MONSTRUOSA DEPRISA?" },
     { 0x81, "BANJO PISA EL SUELO" },
     { 0x81, "CHIRRIANTE" },
     { 0x82, "BANJO HACE SONAR" },
@@ -1338,12 +1338,12 @@ static DialogLine _1262_t[] = {
 
 /* ============================================================
  * 0x1263 - What's in crate at crane in RBB (B:7 T:0 -> correct: TNT)
- * DE: "EINE FRAGE KOMMT MIR IN / DEN SINN, WAS IST IN / RUSTY BUCKET BAY AM KRAN / IN DER KISTE DRIN?"
+ * DE: "EINE FRAGE KOMMT MIR IN / DEN SINN, WAS IST IN / BAH\xCD" "A OXIDADA AM KRAN / IN DER KISTE DRIN?"
  * ============================================================ */
 static DialogLine _1263_b[] = {
     { 0x80, "UNA PREGUNTA SE ME OCURRE," },
-    { 0x80, "\xBF" "QU\xC9 HAY EN RUSTY BUCKET" },
-    { 0x80, "BAY EN LA CAJA DE" },
+    { 0x80, "\xBF" "QU\xC9 HAY EN BAH\xCD" "A" },
+    { 0x80, "OXIDADA EN LA CAJA DE" },
     { 0x80, "LA GR\xDA" "A QUE RECURRE?" },
     { 0x81, "TNT" },
     { 0x82, "TRES VIDAS EXTRA" },
@@ -1355,10 +1355,10 @@ static DialogLine _1263_t[] = {
 
 /* ============================================================
  * 0x1264 - How many crates in warehouse in RBB (B:6 T:0 -> correct: 15)
- * DE: "IN DER RUSTY BAY, EIN / LAGERRAUM, WIEVIELE / KISTEN MUSST DU HALTEN IM ZAUM?"
+ * DE: "IN DER BAH\xCD" "A OXIDADA, EIN / LAGERRAUM, WIEVIELE / KISTEN MUSST DU HALTEN IM ZAUM?"
  * ============================================================ */
 static DialogLine _1264_b[] = {
-    { 0x80, "EN RUSTY BAY, UN" },
+    { 0x80, "EN BAH\xCD" "A OXIDADA, UN" },
     { 0x80, "ALMAC\xC9N, \xBF" "CU\xC1NTAS CAJAS" },
     { 0x80, "DEBES CONTROLAR SIN COMPASI\xD3N?" },
     { 0x81, "15" },
@@ -1371,10 +1371,10 @@ static DialogLine _1264_t[] = {
 
 /* ============================================================
  * 0x1265 - Big fridge in RBB, what's in it? (B:7 T:0 -> correct: BLAUE EIER/blue eggs)
- * DE: "IN DER RUSTY BAY EIN / GROSSER KÜHLSCHRANK STEHT, / SAGT MIR, WAS IHR DARIN / SEHT!"
+ * DE: "IN DER BAH\xCD" "A OXIDADA EIN / GROSSER KÜHLSCHRANK STEHT, / SAGT MIR, WAS IHR DARIN / SEHT!"
  * ============================================================ */
 static DialogLine _1265_b[] = {
-    { 0x80, "EN RUSTY BAY HAY UN" },
+    { 0x80, "EN BAH\xCD" "A OXIDADA HAY UN" },
     { 0x80, "GRAN REFRIGERADOR HELADO," },
     { 0x80, "DECIDME, \xBF" "QU\xC9 HAB\xC9IS" },
     { 0x80, "\xA1" "ALL\xCD ENCONTRADO!" },
@@ -1388,10 +1388,10 @@ static DialogLine _1265_t[] = {
 
 /* ============================================================
  * 0x1266 - What's found under the anchor in RBB (B:6 T:0 -> correct: EINEN DELPHIN/dolphin)
- * DE: "DIE RUSTY BUCKET IST EIN / TANKER, WAS FINDET MAN / UNTERHALB VOM ANKER?"
+ * DE: "DIE BAH\xCD" "A OXIDADA IST EIN / TANKER, WAS FINDET MAN / UNTERHALB VOM ANKER?"
  * ============================================================ */
 static DialogLine _1266_b[] = {
-    { 0x80, "RUSTY BUCKET ES UN BUQUE" },
+    { 0x80, "BAH\xCD" "A OXIDADA ES UN BUQUE" },
     { 0x80, "PETROLERO, \xBF" "QU\xC9 ENCUENTRAS" },
     { 0x80, "DEBAJO DEL ANCLA, EMBUSTERO?" },
     { 0x81, "UN DELF\xCD" "N" },
@@ -1404,11 +1404,11 @@ static DialogLine _1266_t[] = {
 
 /* ============================================================
  * 0x1267 - What can't be stopped in RBB (B:7 T:0 -> correct: DIE DREHENDEN ZAHNRÄDER)
- * DE: "SELBST WENN SICH DIE / ATOME SPALTEN, WAS IST / IN RUSTY BAY NICHT / AUFZUHALTEN?"
+ * DE: "SELBST WENN SICH DIE / ATOME SPALTEN, WAS IST / IN BAH\xCD" "A OXIDADA NICHT / AUFZUHALTEN?"
  * ============================================================ */
 static DialogLine _1267_b[] = {
     { 0x80, "AUNQUE SE PARTAN LOS" },
-    { 0x80, "\xC1TOMOS, \xBF" "QU\xC9 EN RUSTY" },
+    { 0x80, "\xC1TOMOS, \xBF" "QU\xC9 EN BAH\xCD" "A OXIDADA" },
     { 0x80, "BAY NO SE PUEDE" },
     { 0x80, "PARAR, PALURDOS?" },
     { 0x81, "LOS ENGRANAJES GIRANDO" },
@@ -1424,7 +1424,7 @@ static DialogLine _1267_t[] = {
  * DE: "DREI AUSSAGEN ÜBER RUSTY / BAY SIND DA, ABER NUR / EINE DAVON IST WAHR!"
  * ============================================================ */
 static DialogLine _1268_b[] = {
-    { 0x80, "TRES AFIRMACIONES SOBRE RUSTY" },
+    { 0x80, "TRES AFIRMACIONES SOBRE BAH\xCD" "A OXIDADA" },
     { 0x80, "BAY HAY AQU\xCD, PERO SOLO" },
     { 0x80, "\xA1" "UNA ES VERDAD PARA TI!" },
     { 0x81, "HAY CUATRO" },
@@ -1440,10 +1440,10 @@ static DialogLine _1268_t[] = {
 
 /* ============================================================
  * 0x1269 - What did you NOT read on wall in RBB (B:6 T:0 -> correct: TOLL 7)
- * DE: "DU BIST IN RUSTY BAY / GEWESEN, WAS HAST DU AN / DER WAND NICHT GELESEN?"
+ * DE: "DU BIST IN BAH\xCD" "A OXIDADA / GEWESEN, WAS HAST DU AN / DER WAND NICHT GELESEN?"
  * ============================================================ */
 static DialogLine _1269_b[] = {
-    { 0x80, "EN RUSTY BAY YA HAS" },
+    { 0x80, "EN BAH\xCD" "A OXIDADA YA HAS" },
     { 0x80, "ESTADO, \xBF" "QU\xC9 NO HAS" },
     { 0x80, "LE\xCD" "DO EN LA PARED, MALVADO?" },
     { 0x81, "TOLL 7" },
@@ -1456,11 +1456,11 @@ static DialogLine _1269_t[] = {
 
 /* ============================================================
  * 0x126A - Foghorn code in RBB (B:5 T:0 -> correct: 312-111)
- * DE: "DU KANNST NUR EINMAL ZIELEN, / WELCHEN CODE MUSST DU AUF DEM NEBELHORN DER RUSTY BUCKET SPIELEN?"
+ * DE: "DU KANNST NUR EINMAL ZIELEN, / WELCHEN CODE MUSST DU AUF DEM NEBELHORN DER BAH\xCD" "A OXIDADA SPIELEN?"
  * ============================================================ */
 static DialogLine _126a_b[] = {
     { 0x80, "SOLO PUEDES APUNTAR UNA VEZ," },
-    { 0x80, "\xBF" "QU\xC9 C\xD3" "DIGO DEBES TOCAR EN LA SIRENA DE RUSTY BUCKET, INSENSATEZ?" },
+    { 0x80, "\xBF" "QU\xC9 C\xD3" "DIGO DEBES TOCAR EN LA SIRENA DE BAH\xCD" "A OXIDADA, INSENSATEZ?" },
     { 0x81, "312-111" },
     { 0x82, "213-111" },
     { 0x83, "321-123" },
@@ -1477,7 +1477,7 @@ static DialogLine _126b_b[] = {
     { 0x80, "PEQUE\xD1" "A GARRAPATA, \xBF" "QU\xC9" },
     { 0x80, "DIBUJO ADORNA EN EL" },
     { 0x80, "CAMAROTE DEL CAPIT\xC1N EN" },
-    { 0x80, "RUSTY BAY LA COLCHA?" },
+    { 0x80, "BAH\xCD" "A OXIDADA LA COLCHA?" },
     { 0x81, "ANCLA" },
     { 0x82, "H\xC9LICE" },
     { 0x83, "FLORES" },
@@ -1506,10 +1506,10 @@ static DialogLine _126c_t[] = {
 
 /* ============================================================
  * 0x126D - Squirrel's hobby in CCW (B:5 T:0 -> correct: EICHELN FUTTERN/eat acorns)
- * DE: "DAS EICHHÖRNCHEN IM CLICK CLOCK WOOD, AUF DEM BAUM, / VON WELCHEM HOBBY LÄSST ES KAUM?"
+ * DE: "DAS EICHHÖRNCHEN IM BOSQUE DEL RELOJ, AUF DEM BAUM, / VON WELCHEM HOBBY LÄSST ES KAUM?"
  * ============================================================ */
 static DialogLine _126d_b[] = {
-    { 0x80, "LA ARDILLA EN CLICK CLOCK WOOD, EN EL \xC1RBOL POSADA," },
+    { 0x80, "LA ARDILLA EN BOSQUE DEL RELOJ, EN EL \xC1RBOL POSADA," },
     { 0x80, "\xBF" "DE QU\xC9 PASATIEMPO NO SE SEPARA?" },
     { 0x81, "COMER BELLOTAS" },
     { 0x82, "DORMIR" },
@@ -1538,10 +1538,10 @@ static DialogLine _126e_t[] = {
 
 /* ============================================================
  * 0x126F - Eagle name in CCW (B:6 T:0 -> correct: EYRIE)
- * DE: "IM CLICK CLOCK WOOD, DER / ADLER, DER LAHME, WIE / WAR NOCHMAL SEIN NAME?"
+ * DE: "IM BOSQUE DEL RELOJ, DER / ADLER, DER LAHME, WIE / WAR NOCHMAL SEIN NAME?"
  * ============================================================ */
 static DialogLine _126f_b[] = {
-    { 0x80, "EN CLICK CLOCK WOOD, EL" },
+    { 0x80, "EN BOSQUE DEL RELOJ, EL" },
     { 0x80, "\xC1GUILA TORPE SIN FAMA," },
     { 0x80, "\xBF" "C\xD3MO ERA SU NOMBRE?" },
     { 0x81, "EYRIE" },

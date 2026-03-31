@@ -578,7 +578,7 @@ static DialogLine c2a_b[] = {
     { BOTTLES,         "\xA1" "MARAVILLOSO! \xA1" "YA HAN" },
     { BOTTLES,         "APRENDIDO TODO LO" },
     { BOTTLES,         "QUE HAY QUE APRENDER" },
-    { BOTTLES,         "EN FREEZEEZY PEAK!" },
+    { BOTTLES,         "EN PICO FREEZEEZY!" },
     { DIALOG_CLOSE_ALT, "" },
 };
 static DialogLine c2a_t[] = {

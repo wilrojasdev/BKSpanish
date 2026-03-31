@@ -31,9 +31,9 @@ static DialogLine _1424_b[] = {
     { 0x80, "MI BANDA ES FAMOSA" },
     { 0x80, "EN TODA LA REGI\xD3N," },
     { 0x80, "\xBF" "C\xD3MO SE LLAMA CON PASI\xD3N?" },
-    { 0x81, "GRUNTYS MONSTERMOB" },
-    { 0x82, "GRUNTYS SCH\xDA" "RZENJ\xC1GER" },
-    { 0x83, "GRUNTYS KESSELREIHER" },
+    { 0x81, "GRUNTY Y LOS MONSTRUOS" },
+    { 0x82, "LAS CAZABRUJOS DE GRUNTY" },
+    { 0x83, "GRUNTY Y LOS CALDEROS" },
 };
 
 /* 0x1423 - Brentilda Q: What is my dog's name?
@@ -45,8 +45,8 @@ static DialogLine _1423_b[] = {
     { 0x80, "Y CON ESMERO," },
     { 0x80, "\xBF" "C\xD3MO SE LLAMA" },
     { 0x80, "MI PERRO?" },
-    { 0x81, "WALDI" },
-    { 0x82, "RIPPER" },
+    { 0x81, "CHUCHI" },
+    { 0x82, "DESTRIPADOR" },
     { 0x83, "LASSIE" },
 };
 
@@ -71,10 +71,9 @@ static DialogLine _1421_b[] = {
     { 0x80, "TENGO LA MEJOR" },
     { 0x80, "ESCOBA DE BRUJA, \xBF" "QU\xC9 TAN" },
     { 0x80, "R\xC1PIDA ES MI FUGA?" },
-    { 0x81, "R\xC1PIDA COMO EL SONIDO" },
-    { 0x82, "R\xC1PIDA COMO LA LUZ" },
-    { 0x83, "R\xC1PIDA COMO UNA LENTA" },
-    { 0x83, "MOSCA DOM\xC9STICA" },
+    { 0x81, "EL SONIDO" },
+    { 0x82, "LA LUZ" },
+    { 0x83, "UNA MOSCA COJA" },
 };
 
 /* 0x1420 - Brentilda Q: I rarely cuddle, but when I do, with what animal?
@@ -85,9 +84,9 @@ static DialogLine _1420_b[] = {
     { 0x80, "ABRAZAR CASI NUNCA" },
     { 0x80, "ES MI PLAN," },
     { 0x80, "\xBF" "PERO CON QU\xC9 BICHO LO HAR\xC1N?" },
-    { 0x81, "CON UN CR\xC1NEO" },
-    { 0x82, "CON UNA COBRA VIVA" },
-    { 0x83, "CON UN MU\xD1" "ECO VOODOO" },
+    { 0x81, "UNA CALAVERA" },
+    { 0x82, "UNA COBRA VIVA" },
+    { 0x83, "UN MU\xD1" "ECO DE VUD\xDA" },
 };
 
 /* 0x141F - Brentilda Q: What lucky charm do I carry?
@@ -99,7 +98,7 @@ static DialogLine _141f_b[] = {
     { 0x80, "CONMIGO LLEVO EN VERDAD," },
     { 0x80, "\xBF" "QU\xC9 ES? \xA1" "DILO CON CLARIDAD!" },
     { 0x81, "UNA CABEZA REDUCIDA" },
-    { 0x82, "UNA COLA DE ZORRILLO" },
+    { 0x82, "UNA COLA DE MOFETA" },
     { 0x83, "UNA PATA DE CERDO" },
 };
 
@@ -112,8 +111,8 @@ static DialogLine _141e_b[] = {
     { 0x80, "ERA MUY AMABLE," },
     { 0x80, "\xA1" "HASTA EN MI CAMA" },
     { 0x80, "DORM\xCD" "A ADORABLE!" },
-    { 0x81, "UN SAPO MUERTO" },
-    { 0x82, "UN MURCI\xC9LAGO TRICEF\xC1LICO" },
+    { 0x81, "UNA RANA MUERTA" },
+    { 0x82, "UN MURCI\xC9LAGO DE TRES CABEZAS" },
     { 0x83, "UNA GALLINA SIN CABEZA" },
 };
 
@@ -124,9 +123,9 @@ static DialogLine _141e_b[] = {
 static DialogLine _141d_b[] = {
     { 0x80, "UN JOVEN ME GUST\xD3 UN MONT\xD3N," },
     { 0x80, "\xA1" "TEN\xCD" "A ENCANTO Y DISTINCI\xD3N!" },
-    { 0x81, "JOE KLO" },
-    { 0x82, "KAIN SPASS" },
-    { 0x83, "WILL HIRN" },
+    { 0x81, "PEPE LETRINA" },
+    { 0x82, "JUAN SIN GRACIA" },
+    { 0x83, "MEMO CABEZA HUECA" },
 };
 
 /* 0x141C - Brentilda Q: What is my hobby?
@@ -138,8 +137,8 @@ static DialogLine _141c_b[] = {
     { 0x80, "QUE ES GENIAL," },
     { 0x80, "\xBF" "LO SABES T\xDA, ANIMAL?" },
     { 0x81, "COMER CHOCOLATE DE HORMIGAS" },
-    { 0x82, "EXPLOTAR GRANOS" },
-    { 0x83, "MORDERSE LAS U\xD1" "AS DEL PIE" },
+    { 0x82, "REVENTARSE LOS GRANOS" },
+    { 0x83, "MORDERSE LAS U\xD1" "AS DE LOS PIES" },
 };
 
 /* 0x141B - Brentilda Q: What do I do on the title screen?
@@ -150,9 +149,9 @@ static DialogLine _141b_b[] = {
     { 0x80, "LA REVISTA DE BRUJAS" },
     { 0x80, "ME ADORA CON FERVOR," },
     { 0x80, "\xBF" "QU\xC9 HAGO EN LA PORTADA CON VALOR?" },
-    { 0x81, "GOLPEAR NI\xD1OS PEQUE\xD1OS" },
-    { 0x82, "POSAR EN ROPA INTERIOR" },
-    { 0x83, "HURGARME LA NARIZ" },
+    { 0x81, "PEGA A NI\xD1OS PEQUE\xD1OS" },
+    { 0x82, "POSA EN ROPA INTERIOR" },
+    { 0x83, "SE HURGA LA NARIZ" },
 };
 
 /* 0x141A - Brentilda Q: What competition did I win 1st place?
@@ -163,9 +162,9 @@ static DialogLine _141a_b[] = {
     { 0x80, "FUE UNA COMPETENCIA TOTAL," },
     { 0x80, "\xBF" "EN QU\xC9 CONCURSO FUI" },
     { 0x80, "LA TRIUNFADORA ESPECIAL?" },
-    { 0x81, "CONCURSO DE VERRUGAS" },
-    { 0x82, "CONCURSO DE AGUAFIESTAS" },
-    { 0x83, "CONCURSO DE CALCETINES APESTOSOS" },
+    { 0x81, "CARAS VERRUGOSAS" },
+    { 0x82, "AGUAFIESTAS" },
+    { 0x83, "CALCETINES APESTOSOS" },
 };
 
 /* 0x1419 - Brentilda Q: Where do I sleep at night?
@@ -176,9 +175,9 @@ static DialogLine _1419_b[] = {
     { 0x80, "OTROS DUERMEN EN CAMA" },
     { 0x80, "CON MANTA Y COBERTOR," },
     { 0x80, "\xBF" "D\xD3NDE DUERMO YO CON AMOR?" },
-    { 0x81, "EN UNA CAMA DE CLAVOS" },
-    { 0x82, "EN UN BOTE DE BASURA" },
-    { 0x83, "EN UN CHIQUERO" },
+    { 0x81, "UNA CAMA DE CLAVOS" },
+    { 0x82, "UN CONTENEDOR DE BASURA" },
+    { 0x83, "UNA POCILGA" },
 };
 
 /* 0x1418 - Brentilda Q: What is my favorite drink?
@@ -190,8 +189,8 @@ static DialogLine _1418_b[] = {
     { 0x80, "MI TRAGO IDEAL," },
     { 0x80, "\xA1" "SE PERDI\xD3 LA MITAD" },
     { 0x80, "DEL JUEGO TOTAL!" },
-    { 0x81, "MALTEADA DE RATA" },
-    { 0x82, "C\xD3" "CTEL DE PATA DE ARA\xD1" "A" },
+    { 0x81, "BATIDO DE RATA" },
+    { 0x82, "C\xD3" "CTEL DE PATAS DE ARA\xD1" "A" },
     { 0x83, "BEBIDA DE BABA DE SAPO" },
 };
 
@@ -204,8 +203,8 @@ static DialogLine _1417_b[] = {
     { 0x80, "EL KIOSCO PARANDO," },
     { 0x80, "\xBF" "QU\xC9 REVISTA ESTOY" },
     { 0x80, "COMPRANDO?" },
-    { 0x81, "MUNDO BRUJO A COLOR" },
-    { 0x82, "REVISTA BRUJER\xCD" "A" },
+    { 0x81, "EL MUNDO DE LAS BRUJAS" },
+    { 0x82, "LA REVISTA BRUJIL" },
     { 0x83, "EL CORREO DEL CALDERO" },
 };
 
@@ -218,7 +217,7 @@ static DialogLine _1416_b[] = {
     { 0x80, "ESCUELA SIN IGUAL," },
     { 0x80, "\xBF" "QUI\xC9N ERA MI AMIGO" },
     { 0x80, "ESPECIAL?" },
-    { 0x81, "UNA SERPIENTE CASCABEL" },
+    { 0x81, "UNA SERPIENTE DE CASCABEL" },
     { 0x82, "LA PIZARRA" },
     { 0x83, "EL CONSERJE" },
 };
@@ -231,9 +230,9 @@ static DialogLine _1415_b[] = {
     { 0x80, "MI ROPA INTERIOR" },
     { 0x80, "NO ES NUEVA, LO S\xC9," },
     { 0x80, "\xBF" "QU\xC9 DISE\xD1O TIENE, DIME POR QU\xC9?" },
-    { 0x81, "RAYAS AZUL OSCURO" },
-    { 0x82, "LUNARES ROSA Y VERDE" },
-    { 0x83, "SALPICADA AMARILLO VENENO" },
+    { 0x81, "DE RAYAS NEGRIAZULES" },
+    { 0x82, "DE LUNARES ROSIVERDE" },
+    { 0x83, "AMARILLO VENENO SALPICADA" },
 };
 
 /* 0x1414 - Brentilda Q: What grows in my flowerpot?
@@ -244,9 +243,9 @@ static DialogLine _1414_b[] = {
     { 0x80, "ES COMO UN HECHIZO FATAL," },
     { 0x80, "\xBF" "QU\xC9 CRECE EN MI MACETA" },
     { 0x80, "DE FORMA FENOMENAL?" },
-    { 0x81, "\xC1RBOL DE OJOS SALTONES" },
-    { 0x82, "VENUS ATRAPAMOSCAS" },
-    { 0x83, "ROSA DE ESPINAS VENENOSAS" },
+    { 0x81, "UN \xC1RBOL DE OJOS SALTONES" },
+    { 0x82, "UNA VENUS ATRAPAMOSCAS" },
+    { 0x83, "UNA ROSA DE ESPINAS VENENOSAS" },
 };
 
 /* 0x1413 - Brentilda Q: What hangs from my bedroom ceiling?
@@ -258,9 +257,9 @@ static DialogLine _1413_b[] = {
     { 0x80, "\xBF" "QU\xC9 CUELGA DEL TECHO" },
     { 0x80, "EN MI CUARTO A" },
     { 0x80, "RETAZOS?" },
-    { 0x81, "PESCADO PODRIDO" },
+    { 0x81, "PESCADOS PODRIDOS" },
     { 0x82, "CALCETINES APESTOSOS" },
-    { 0x83, "GUSANOS CON MOHO" },
+    { 0x83, "GUSANOS MOHOSOS" },
 };
 
 /* 0x1412 - Brentilda Q: What is my favorite dessert?
@@ -272,8 +271,8 @@ static DialogLine _1412_b[] = {
     { 0x80, "VEN AQU\xCD CON VALOR," },
     { 0x80, "\xBF" "CU\xC1L ES MI POSTRE FAVORITO, AMOR?" },
     { 0x81, "HELADO DE GLOBO OCULAR" },
-    { 0x82, "CARNE CRUDA CON MERMELADA" },
-    { 0x83, "ENSALADA DE LOMBRIZ" },
+    { 0x82, "CARNE PICADA CON MERMELADA" },
+    { 0x83, "ENSALADA DE GUSANOS" },
 };
 
 /* 0x1411 - Brentilda Q: What do I eat for dinner?
@@ -285,7 +284,7 @@ static DialogLine _1411_b[] = {
     { 0x80, "DELICIOSO Y CON SABORCI\xD3N?" },
     { 0x81, "BABA DE CARACOL" },
     { 0x82, "HAMBURGUESA DE MURCI\xC9LAGO" },
-    { 0x83, "BISTEC DE GATO" },
+    { 0x83, "FILETE DE GATO" },
 };
 
 /* 0x1410 - Brentilda Q: What do I eat for breakfast?
@@ -309,9 +308,9 @@ static DialogLine _140f_b[] = {
     { 0x80, "DIME C\xD3MO GRUNTILDA" },
     { 0x80, "A SUS INVITADOS" },
     { 0x80, "\xA1" "LES DIVIERTE CON CUIDADOS!" },
-    { 0x81, "HACE COMER A TODOS" },
-    { 0x82, "TOMA REHENES" },
-    { 0x83, "BEBE DEL INODORO" },
+    { 0x81, "COMERSE A LOS INVITADOS" },
+    { 0x82, "TOMAR REHENES" },
+    { 0x83, "BEBER DEL INODORO" },
 };
 
 /* 0x140E - Brentilda Q: What school did I attend?
@@ -323,8 +322,8 @@ static DialogLine _140e_b[] = {
     { 0x80, "\xBF" "A QU\xC9 ESCUELA FUI, DI CON ESMERO," },
     { 0x80, "\xA1" "O HABLAR\xC1 MI ESCOBA PRIMERO!" },
     { 0x81, "UNIVERSIDAD DE BRUJAS" },
-    { 0x82, "PUESTO DE PAPAS" },
-    { 0x83, "PARADA DE BUS" },
+    { 0x82, "FREIDUR\xCD" "A DE PATATAS" },
+    { 0x83, "PARADA DE AUTOB\xDA" "S" },
 };
 
 /* 0x140D - Brentilda Q: What sport do I play?
@@ -337,7 +336,7 @@ static DialogLine _140d_b[] = {
     { 0x80, "O HABR\xC1 DOLOR," },
     { 0x80, "\xA1" "RESPONDE CON VALOR!" },
     { 0x81, "LEVANTAR CALDEROS" },
-    { 0x82, "LANZAR LIBROS M\xC1GICOS" },
+    { 0x82, "LANZAR LIBROS DE HECHIZOS" },
     { 0x83, "CARRERAS DE ESCOBA" },
 };
 
@@ -388,9 +387,9 @@ static DialogLine _1409_b[] = {
     { 0x80, "MI ROPA, NO ES TAN" },
     { 0x80, "DIF\xCD" "CIL DE ADIVINAR," },
     { 0x80, "\xBF" "DE D\xD3NDE LA PUEDO SACAR?" },
-    { 0x81, "DEL BOTE DE BASURA" },
-    { 0x82, "BOUTIQUE SAGGY MAGGY" },
-    { 0x83, "TIENDA BRUJA DE DESCUENTO" },
+    { 0x81, "EL CONTENEDOR DE BASURA" },
+    { 0x82, "LA BOUTIQUE DE SAGGY MAGGY" },
+    { 0x83, "EL BAZAR DE LAS BRUJAS" },
 };
 
 /* 0x1408 - Brentilda Q: What do I wash my hair with?
@@ -414,7 +413,7 @@ static DialogLine _1407_b[] = {
     { 0x80, "NO ME HAGAS UNA ESCENA," },
     { 0x80, "\xBF" "CON QU\xC9 ME LIMPIO" },
     { 0x80, "LA DENTADURA BUENA?" },
-    { 0x81, "LODO" },
+    { 0x81, "BARRO" },
     { 0x82, "PIEL DE MURCI\xC9LAGO" },
     { 0x83, "QUESO APESTOSO" },
 };
@@ -465,9 +464,9 @@ static DialogLine _13d2_b[] = {
     { 0x80, "DIME SIN BURLA," },
     { 0x80, "\xBF" "DE QU\xC9 MUNDO VIENE" },
     { 0x80, "ESTE SONIDO TAN CHULO?" },
-    { 0x81, "RUSTY BUCKET BAY" },
-    { 0x82, "CLICK CLOCK WOOD" },
-    { 0x83, "RUSTY CLOCK WOOD" },
+    { 0x81, "BAH\xCD" "A OXIDADA" },
+    { 0x82, "BOSQUE DEL RELOJ" },
+    { 0x83, "BAH\xCD" "A DEL RELOJ" },
 };
 
 /* 0x13D1 - Music Q: CCW / Bubblegloop Swamp / Bubbleclock Wood
@@ -476,9 +475,9 @@ static DialogLine _13d1_b[] = {
     { 0x80, "DIME SIN BURLA," },
     { 0x80, "\xBF" "DE QU\xC9 MUNDO VIENE" },
     { 0x80, "ESTE SONIDO TAN CHULO?" },
-    { 0x81, "CLICK CLOCK WOOD" },
-    { 0x82, "BUBBLEGLOOP SWAMP" },
-    { 0x83, "BUBBLECLOCK WOOD" },
+    { 0x81, "BOSQUE DEL RELOJ" },
+    { 0x82, "PANTANO BUBBLEGLOOP" },
+    { 0x83, "BOSQUE BUBBLEGLOOP" },
 };
 
 /* 0x13D0 - Music Q: Freezeezy Peak / TTC / Freezeezy Cove
@@ -487,9 +486,9 @@ static DialogLine _13d0_b[] = {
     { 0x80, "DIME SIN BURLA," },
     { 0x80, "\xBF" "DE QU\xC9 MUNDO VIENE" },
     { 0x80, "ESTE SONIDO TAN CHULO?" },
-    { 0x81, "FREEZEEZY PEAK" },
-    { 0x82, "TREASURE TROVE COVE" },
-    { 0x83, "FREEZEEZY COVE" },
+    { 0x81, "PICO FREEZEEZY" },
+    { 0x82, "CALA DEL TESORO" },
+    { 0x83, "CALA FREEZEEZY" },
 };
 
 /* 0x13CF - Music Q: MMM / RBB / Rusty Monster Bay
@@ -498,9 +497,9 @@ static DialogLine _13cf_b[] = {
     { 0x80, "DIME SIN BURLA," },
     { 0x80, "\xBF" "DE QU\xC9 MUNDO VIENE" },
     { 0x80, "ESTE SONIDO TAN CHULO?" },
-    { 0x81, "MAD MONSTER MANSION" },
-    { 0x82, "RUSTY BUCKET BAY" },
-    { 0x83, "RUSTY MONSTER BAY" },
+    { 0x81, "MANSI\xD3N MONSTRUOSA" },
+    { 0x82, "BAH\xCD" "A OXIDADA" },
+    { 0x83, "BAH\xCD" "A MONSTRUOSA" },
 };
 
 /* 0x13CE - Music Q: Gobi's Valley / Freezeezy Peak / Gobi's Peak
@@ -509,9 +508,9 @@ static DialogLine _13ce_b[] = {
     { 0x80, "DIME SIN BURLA," },
     { 0x80, "\xBF" "DE QU\xC9 MUNDO VIENE" },
     { 0x80, "ESTE SONIDO TAN CHULO?" },
-    { 0x81, "GOBI'S VALLEY" },
-    { 0x82, "FREEZEEZY PEAK" },
-    { 0x83, "GOBI'S PEAK" },
+    { 0x81, "VALLE DE GOBI" },
+    { 0x82, "PICO FREEZEEZY" },
+    { 0x83, "PICO DE GOBI" },
 };
 
 /* 0x13CD - Music Q: BGS / Mumbo's Mountain / Bubble Gum Mountain
@@ -520,9 +519,9 @@ static DialogLine _13cd_b[] = {
     { 0x80, "DIME SIN BURLA," },
     { 0x80, "\xBF" "DE QU\xC9 MUNDO VIENE" },
     { 0x80, "ESTE SONIDO TAN CHULO?" },
-    { 0x81, "BUBBLEGLOOP SWAMP" },
-    { 0x82, "MUMBO'S MOUNTAIN" },
-    { 0x83, "BUBBLE GUM MOUNTAIN" },
+    { 0x81, "PANTANO BUBBLEGLOOP" },
+    { 0x82, "MONTA\xD1" "A DE MUMBO" },
+    { 0x83, "MONTA\xD1" "A CHICLE" },
 };
 
 /* 0x13CC - Music Q: Clanker's Cavern / CCW / Clanker's Clock
@@ -531,9 +530,9 @@ static DialogLine _13cc_b[] = {
     { 0x80, "DIME SIN BURLA," },
     { 0x80, "\xBF" "DE QU\xC9 MUNDO VIENE" },
     { 0x80, "ESTE SONIDO TAN CHULO?" },
-    { 0x81, "CLANKER'S CAVERN" },
-    { 0x82, "CLICK CLOCK WOOD" },
-    { 0x83, "CLANKER'S CLOCK" },
+    { 0x81, "CAVERNA DE CLANKER" },
+    { 0x82, "BOSQUE DEL RELOJ" },
+    { 0x83, "RELOJ DE CLANKER" },
 };
 
 /* 0x13CB - Music Q: TTC / RBB / Treasure Bucket Bay
@@ -542,9 +541,9 @@ static DialogLine _13cb_b[] = {
     { 0x80, "DIME SIN BURLA," },
     { 0x80, "\xBF" "DE QU\xC9 MUNDO VIENE" },
     { 0x80, "ESTE SONIDO TAN CHULO?" },
-    { 0x81, "TREASURE TROVE COVE" },
-    { 0x82, "RUSTY BUCKET BAY" },
-    { 0x83, "TREASURE BUCKET BAY" },
+    { 0x81, "CALA DEL TESORO" },
+    { 0x82, "BAH\xCD" "A OXIDADA" },
+    { 0x83, "BAH\xCD" "A DEL TESORO" },
 };
 
 /* 0x13CA - Music Q: Mumbo's Mountain / MMM / Mad Mumbo's Mansion
@@ -553,9 +552,9 @@ static DialogLine _13ca_b[] = {
     { 0x80, "DIME SIN BURLA," },
     { 0x80, "\xBF" "DE QU\xC9 MUNDO VIENE" },
     { 0x80, "ESTE SONIDO TAN CHULO?" },
-    { 0x81, "MUMBO'S MOUNTAIN" },
-    { 0x82, "MAD MONSTER MANSION" },
-    { 0x83, "MAD MUMBO'S MANSION" },
+    { 0x81, "MONTA\xD1" "A DE MUMBO" },
+    { 0x82, "MANSI\xD3N MONSTRUOSA" },
+    { 0x83, "MANSI\xD3N LOCA DE MUMBO" },
 };
 
 /* 0x13C9 - Music Q: Mumbo's skull cave / Mumbo's penthouse / Mumbo's shop
@@ -1144,9 +1143,9 @@ static DialogLine _12e3_b[] = {
     { 0x80, "COMPLETO ZOPENCO," },
     { 0x80, "\xA1" "DIME D\xD3NDE ES ESTO" },
     { 0x80, "SIN SER MUECO!" },
-    { 0x81, "CLICK CLOCK WOOD" },
-    { 0x82, "MAD MONSTER MANSION" },
-    { 0x83, "BUBBLEGLOOP SWAMP" },
+    { 0x81, "BOSQUE DEL RELOJ" },
+    { 0x82, "MANSI\xD3N MONSTRUOSA" },
+    { 0x83, "PANTANO BUBBLEGLOOP" },
 };
 
 /* 0x12E2 - Location Q: RBB / MMM / Clanker's Cavern
@@ -1156,9 +1155,9 @@ static DialogLine _12e2_b[] = {
     { 0x80, "COMPLETO ZOPENCO," },
     { 0x80, "\xA1" "DIME D\xD3NDE ES ESTO" },
     { 0x80, "SIN SER MUECO!" },
-    { 0x81, "RUSTY BUCKET BAY" },
-    { 0x82, "MAD MONSTER MANSION" },
-    { 0x83, "CLANKER'S CAVERN" },
+    { 0x81, "BAH\xCD" "A OXIDADA" },
+    { 0x82, "MANSI\xD3N MONSTRUOSA" },
+    { 0x83, "CAVERNA DE CLANKER" },
 };
 
 /* 0x12E1 - Location Q: MMM / RBB / Clanker's Cavern
@@ -1168,9 +1167,9 @@ static DialogLine _12e1_b[] = {
     { 0x80, "COMPLETO ZOPENCO," },
     { 0x80, "\xA1" "DIME D\xD3NDE ES ESTO" },
     { 0x80, "SIN SER MUECO!" },
-    { 0x81, "MAD MONSTER MANSION" },
-    { 0x82, "RUSTY BUCKET BAY" },
-    { 0x83, "CLANKER'S CAVERN" },
+    { 0x81, "MANSI\xD3N MONSTRUOSA" },
+    { 0x82, "BAH\xCD" "A OXIDADA" },
+    { 0x83, "CAVERNA DE CLANKER" },
 };
 
 /* 0x12E0 - Location Q: Gobi's Valley / TTC / Mumbo's Mountain
@@ -1180,9 +1179,9 @@ static DialogLine _12e0_b[] = {
     { 0x80, "COMPLETO ZOPENCO," },
     { 0x80, "\xA1" "DIME D\xD3NDE ES ESTO" },
     { 0x80, "SIN SER MUECO!" },
-    { 0x81, "GOBI'S VALLEY" },
-    { 0x82, "TREASURE TROVE COVE" },
-    { 0x83, "MUMBO'S MOUNTAIN" },
+    { 0x81, "VALLE DE GOBI" },
+    { 0x82, "CALA DEL TESORO" },
+    { 0x83, "MONTA\xD1" "A DE MUMBO" },
 };
 
 /* 0x12DF - Location Q: Freezeezy Peak / CCW / RBB
@@ -1192,9 +1191,9 @@ static DialogLine _12df_b[] = {
     { 0x80, "COMPLETO ZOPENCO," },
     { 0x80, "\xA1" "DIME D\xD3NDE ES ESTO" },
     { 0x80, "SIN SER MUECO!" },
-    { 0x81, "FREEZEEZY PEAK" },
-    { 0x82, "CLICK CLOCK WOOD" },
-    { 0x83, "RUSTY BUCKET BAY" },
+    { 0x81, "PICO FREEZEEZY" },
+    { 0x82, "BOSQUE DEL RELOJ" },
+    { 0x83, "BAH\xCD" "A OXIDADA" },
 };
 
 /* 0x12DE - Location Q: BGS / Clanker's Cavern / CCW
@@ -1204,9 +1203,9 @@ static DialogLine _12de_b[] = {
     { 0x80, "COMPLETO ZOPENCO," },
     { 0x80, "\xA1" "DIME D\xD3NDE ES ESTO" },
     { 0x80, "SIN SER MUECO!" },
-    { 0x81, "BUBBLEGLOOP SWAMP" },
-    { 0x82, "CLANKER'S CAVERN" },
-    { 0x83, "CLICK CLOCK WOOD" },
+    { 0x81, "PANTANO BUBBLEGLOOP" },
+    { 0x82, "CAVERNA DE CLANKER" },
+    { 0x83, "BOSQUE DEL RELOJ" },
 };
 
 /* 0x12DD - Location Q: Clanker's Cavern / RBB / BGS
@@ -1216,9 +1215,9 @@ static DialogLine _12dd_b[] = {
     { 0x80, "COMPLETO ZOPENCO," },
     { 0x80, "\xA1" "DIME D\xD3NDE ES ESTO" },
     { 0x80, "SIN SER MUECO!" },
-    { 0x81, "CLANKER'S CAVERN" },
-    { 0x82, "RUSTY BUCKET BAY" },
-    { 0x83, "BUBBLEGLOOP SWAMP" },
+    { 0x81, "CAVERNA DE CLANKER" },
+    { 0x82, "BAH\xCD" "A OXIDADA" },
+    { 0x83, "PANTANO BUBBLEGLOOP" },
 };
 
 /* 0x12DC - Location Q: TTC / Mumbo's Mountain / CCW
@@ -1228,9 +1227,9 @@ static DialogLine _12dc_b[] = {
     { 0x80, "COMPLETO ZOPENCO," },
     { 0x80, "\xA1" "DIME D\xD3NDE ES ESTO" },
     { 0x80, "SIN SER MUECO!" },
-    { 0x81, "TREASURE TROVE COVE" },
-    { 0x82, "MUMBO'S MOUNTAIN" },
-    { 0x83, "CLICK CLOCK WOOD" },
+    { 0x81, "CALA DEL TESORO" },
+    { 0x82, "MONTA\xD1" "A DE MUMBO" },
+    { 0x83, "BOSQUE DEL RELOJ" },
 };
 
 /* 0x12DB - Location Q: Mumbo's Mountain / BGS / CCW
@@ -1240,9 +1239,9 @@ static DialogLine _12db_b[] = {
     { 0x80, "COMPLETO ZOPENCO," },
     { 0x80, "\xA1" "DIME D\xD3NDE ES ESTO" },
     { 0x80, "SIN SER MUECO!" },
-    { 0x81, "MUMBO'S MOUNTAIN" },
-    { 0x82, "BUBBLEGLOOP SWAMP" },
-    { 0x83, "CLICK CLOCK WOOD" },
+    { 0x81, "MONTA\xD1" "A DE MUMBO" },
+    { 0x82, "PANTANO BUBBLEGLOOP" },
+    { 0x83, "BOSQUE DEL RELOJ" },
 };
 
 /* ============================================================
@@ -1263,11 +1262,11 @@ static DialogLine _1276_b[] = {
 };
 
 /* 0x1275 - CCW Q: In Click Clock Wood which statement is true?
- * German: IM CLICK CLOCK WOOD / WÄCHST DIE EICHE / WUNDERBAR, NUR WELCHE / AUSSAGE IST WAHR?
+ * German: IM BOSQUE DEL RELOJ / WÄCHST DIE EICHE / WUNDERBAR, NUR WELCHE / AUSSAGE IST WAHR?
  * Answers: (leaves biggest in summer) / (grass tallest in fall) / (squirrel always outside in winter)
  * B:10 T:0 */
 static DialogLine _1275_b[] = {
-    { 0x80, "EN CLICK CLOCK WOOD" },
+    { 0x80, "EN BOSQUE DEL RELOJ" },
     { 0x80, "EL ROBLE CRECE GENIAL," },
     { 0x80, "\xBF" "PERO QU\xC9 FRASE" },
     { 0x80, "ES LA REAL?" },
@@ -1286,8 +1285,8 @@ static DialogLine _1275_b[] = {
 static DialogLine _1274_b[] = {
     { 0x80, "\xBF" "YA LO OLVIDASTE?" },
     { 0x80, "\xBF" "CU\xC1NTOS GUSANOS QUIERE" },
-    { 0x80, "EL \xC1GUILA EN CLICK CLOCK" },
-    { 0x80, "WOOD EN OTO\xD1O COMER?" },
+    { 0x80, "EL \xC1GUILA EN BOSQUE DEL" },
+    { 0x80, "RELOJ EN OTO\xD1O COMER?" },
     { 0x81, "10" },
     { 0x82, "5" },
     { 0x83, "25" },
@@ -1299,7 +1298,7 @@ static DialogLine _1274_b[] = {
  * B:6 T:0 */
 static DialogLine _1273_b[] = {
     { 0x80, "\xBF" "QU\xC9 HACE MUMBO CUANDO" },
-    { 0x80, "EN CLICK CLOCK WOOD EL" },
+    { 0x80, "EN BOSQUE DEL RELOJ EL" },
     { 0x80, "INVIERNO ES TAN HELADO?" },
     { 0x81, "NO EST\xC1 AH\xCD" },
     { 0x82, "CONSTRUYE MU\xD1" "ECOS DE NIEVE" },
@@ -1307,13 +1306,13 @@ static DialogLine _1273_b[] = {
 };
 
 /* 0x1272 - CCW Q: What season has drought in CCW?
- * German: ZU WELCHER JAHRESZEIT / BEHERRSCHT DEN CLICK / CLOCK WOOD DIE / TROCKENHEIT?
+ * German: ZU WELCHER JAHRESZEIT / BEHERRSCHT DEN CLICK / BOSQUE DEL RELOJ DIE / TROCKENHEIT?
  * Answers: SOMMER / WINTER / HERBST
  * B:7 T:0 */
 static DialogLine _1272_b[] = {
     { 0x80, "\xBF" "EN QU\xC9 ESTACI\xD3N DEL A\xD1O" },
-    { 0x80, "DOMINA EN CLICK CLOCK" },
-    { 0x80, "WOOD LA SEQU\xCD" "A" },
+    { 0x80, "DOMINA EN BOSQUE DEL" },
+    { 0x80, "RELOJ LA SEQU\xCD" "A" },
     { 0x80, "SIN EXTRA\xD1" "AR?" },
     { 0x81, "VERANO" },
     { 0x82, "INVIERNO" },
@@ -1335,13 +1334,13 @@ static DialogLine _1271_b[] = {
 };
 
 /* 0x1270 - CCW Q: What animal does Mumbo transform you into in CCW?
- * German: VERRATE MIR, WAS FÜR EIN / TIER MACHT MUMBO IM / CLICK CLOCK WOOD AUS / DIR?
+ * German: VERRATE MIR, WAS FÜR EIN / TIER MACHT MUMBO IM / BOSQUE DEL RELOJ AUS / DIR?
  * Answers: EINE BIENE / EIN EICHHÖRNCHEN / EINE SCHNECKE
  * B:7 T:0 */
 static DialogLine _1270_b[] = {
     { 0x80, "DIME EN QU\xC9 ANIMAL" },
     { 0x80, "TE TRANSFORMA MUMBO EN" },
-    { 0x80, "CLICK CLOCK WOOD SIN" },
+    { 0x80, "BOSQUE DEL RELOJ SIN" },
     { 0x80, "TEMOR." },
     { 0x81, "UNA ABEJA" },
     { 0x82, "UNA ARDILLA" },

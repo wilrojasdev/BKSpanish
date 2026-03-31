@@ -117,32 +117,8 @@ void onInit()
     translation_build_table(&quiz3_table);
     translation_build_table(&lair_table);
 
-    // Register all tables with AEP
-    DialogDefTable *tables[] = { &sm_table, &core_table, &mumbo_table, &mm_table, &ttc_table, &cc_table, &bgs_table, &fp_table, &gv_table, &mmm_table, &rbb_table, &ccw_table, &misc_table, &taunts_table, &brentilda_table, &parade_table, &puzzleboard_table, &quiz1_table, &quiz2_table, &quiz3_table, &lair_table };
+    // Register raw quiz assets FIRST (with_size must be called before register_replacement)
     s32 total = 0;
-    for (s32 t = 0; t < 21; t++) {
-        for (s32 i = 0; i < tables[t]->count; i++) {
-            if (tables[t]->defs[i].built_data != NULL) {
-                s32 aid = tables[t]->defs[i].asset_id;
-                // Skip ALL quiz question types - registered separately via raw binary
-                // Text: 0x1213-0x1276, Picture: 0x12DB-0x12ED, Sound: 0x13A3-0x13D5, Grunty: 0x1407-0x1424
-                if ((aid >= 0x1213 && aid <= 0x1276) ||
-                    (aid >= 0x12DB && aid <= 0x12ED) ||
-                    (aid >= 0x13A3 && aid <= 0x13D5) ||
-                    (aid >= 0x1407 && aid <= 0x1424)) continue;
-                bk_recomp_aep_register_replacement_with_size(
-                    aid,
-                    (void *)tables[t]->defs[i].built_data,
-                    tables[t]->defs[i].built_size
-                );
-                total++;
-            }
-        }
-    }
-
-    recomp_printf("[BK-ES] %d dialogos registrados\n", total);
-
-    // Register raw quiz assets (0x1213-0x1276) with exact binary format
     {
         extern QuizRawAsset quiz_raw_assets[];
         extern s32 quiz_raw_count;
@@ -154,8 +130,38 @@ void onInit()
             );
             total++;
         }
-        recomp_printf("[BK-ES] +%d quiz assets raw\n", quiz_raw_count);
+        recomp_printf("[BK-ES] %d quiz assets raw\n", quiz_raw_count);
     }
+
+    // Then register all dialog tables with AEP (without size)
+    DialogDefTable *tables[] = { &sm_table, &core_table, &mumbo_table, &mm_table, &ttc_table, &cc_table, &bgs_table, &fp_table, &gv_table, &mmm_table, &rbb_table, &ccw_table, &misc_table, &taunts_table, &brentilda_table, &parade_table, &puzzleboard_table, &quiz1_table, &quiz2_table, &quiz3_table, &lair_table };
+    for (s32 t = 0; t < 21; t++) {
+        for (s32 i = 0; i < tables[t]->count; i++) {
+            if (tables[t]->defs[i].built_data != NULL) {
+                s32 aid = tables[t]->defs[i].asset_id;
+                // Skip quiz question types handled by quiz_raw.c
+                if ((aid >= 0x1213 && aid <= 0x1276) ||
+                    (aid >= 0x12DB && aid <= 0x12ED) ||
+                    (aid >= 0x13A3 && aid <= 0x13D5)) continue;
+                // Grunty personal questions (0x1407-0x1424) need with_size
+                if (aid >= 0x1407 && aid <= 0x1424) {
+                    bk_recomp_aep_register_replacement_with_size(
+                        aid,
+                        (void *)tables[t]->defs[i].built_data,
+                        tables[t]->defs[i].built_size
+                    );
+                } else {
+                    bk_recomp_aep_register_replacement(
+                        aid,
+                        (void *)tables[t]->defs[i].built_data
+                    );
+                }
+                total++;
+            }
+        }
+    }
+
+    recomp_printf("[BK-ES] %d assets totales registrados\n", total);
 
     // === TOTALS PAGE LEVEL NAMES ===
     // Bold font doesn't support remapped glyphs - use plain ASCII
@@ -351,11 +357,17 @@ void injectSpanishGlyphs(void) {
         new_block->w = (s16)w;
         new_block->h = (s16)h;
 
-        // Copy pixels vertically flipped (last row → first row)
+        // ¡ (i=0): vertical flip only. ¿ (i=1): 180° rotation (vertical + horizontal)
         u8 *dst_pixels = buf + 8;
         for (s32 y = 0; y < h; y++) {
             for (s32 x = 0; x < w; x++) {
-                dst_pixels[y * w + x] = src_pixels[(h - 1 - y) * w + x];
+                if (i == 0) {
+                    // ¡: just flip vertically
+                    dst_pixels[y * w + x] = src_pixels[(h - 1 - y) * w + x];
+                } else {
+                    // ¿: flip both vertically AND horizontally (180° rotation)
+                    dst_pixels[y * w + x] = src_pixels[(h - 1 - y) * w + (w - 1 - x)];
+                }
             }
         }
 

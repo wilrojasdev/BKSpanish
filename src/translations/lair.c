@@ -424,7 +424,7 @@ static DialogLine f7e_t[] = {
  * 0xF7F - Bottles: First world refresher (2B, 1T)
  * ============================================================ */
 static DialogLine f7f_b[] = {
-    { BOTTLES,          "ESTE ES EL PRIMER MUNDO, MUMBO'S MOUNTAIN. PARA ABRIR LA PUERTA, DEBEN ENCONTRAR EL CUADRO DE PUZZLE DE ESTE MUNDO. NO PUEDE ESTAR MUY LEJOS." },
+    { BOTTLES,          "ESTE ES EL PRIMER MUNDO, MONTA\xD1" "A DE MUMBO. PARA ABRIR LA PUERTA, DEBEN ENCONTRAR EL CUADRO DE PUZZLE DE ESTE MUNDO. NO PUEDE ESTAR MUY LEJOS." },
     { DIALOG_CLOSE_ALT, "" },
 };
 static DialogLine f7f_t[] = {
@@ -436,7 +436,7 @@ static DialogLine f7f_t[] = {
  * ============================================================ */
 static DialogLine f80_b[] = {
     { BOTTLES,          "ESTE ES EL PRIMER MUNDO," },
-    { BOTTLES,          "MUMBO'S MOUNTAIN. PARA PODER ENTRAR, DEBEN COMPLETAR EL CUADRO DE PUZZLE." },
+    { BOTTLES,          "MONTA\xD1" "A DE MUMBO. PARA PODER ENTRAR, DEBEN COMPLETAR EL CUADRO DE PUZZLE." },
     { DIALOG_CLOSE_ALT, "" },
 };
 static DialogLine f80_t[] = {
