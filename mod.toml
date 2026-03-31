@@ -41,6 +41,7 @@ data_reference_syms_files = [ "BanjoRecompSyms/bk.us.rev0.datasyms.toml" ]
 additional_files = [
     "rt64.json",
     "fonts/excl_inv.png",
+    "fonts/quest_inv.png",
     "fonts/A_acute.png",
     "fonts/E_acute.png",
     "fonts/I_acute.png",

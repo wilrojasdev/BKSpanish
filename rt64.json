@@ -52,6 +52,13 @@
                 "rt64": "f16b15212cc854cc"
             },
             "path": "fonts/E_acute.png"
+        },
+        {
+            "hashes": {
+                "rice": "436e4568#3#1",
+                "rt64": "947f5560bb8efb55"
+            },
+            "path": "fonts/quest_inv.png"
         }
     ]
 }

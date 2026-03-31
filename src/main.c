@@ -446,44 +446,13 @@ void injectSpanishGlyphs(void) {
             px(dst_pixels, w, h, cx,     0, fg);
             px(dst_pixels, w, h, cx - 1, 0, semi);
         } else if (i == 4) {
-            // Í: I is too narrow for accent - WIDEN the glyph
-            // Reallocate with extra width for the accent mark
-            s32 extra_w = 4;
-            s32 new_w = w + extra_w;
-            s32 new_pixel_size = new_w * h;
-            s32 new_total = 8 + new_pixel_size;
-
-            u8 *wbuf = (u8 *)recomp_alloc((unsigned long)(new_total + 16));
-            if (wbuf == NULL) continue;
-            glyph_bufs[i] = wbuf;
-
-            // Header with wider width
-            BKSpriteTextureBlock *wb = (BKSpriteTextureBlock *)wbuf;
-            wb->x = src_block->x;
-            wb->y = src_block->y;
-            wb->w = (s16)new_w;
-            wb->h = (s16)h;
-
-            // Copy pixels: original I centered, extra space on right
-            u8 *wp = wbuf + 8;
-            for (s32 y = 0; y < h; y++) {
-                for (s32 x = 0; x < new_w; x++) {
-                    if (x < w) {
-                        wp[y * new_w + x] = src_pixels[y * w + x];
-                    } else {
-                        wp[y * new_w + x] = 0;
-                    }
-                }
-            }
-
-            // Draw accent in the extra space (right side, top)
-            px(wp, new_w, h, new_w - 2, 0, fg);
-            px(wp, new_w, h, new_w - 1, 0, fg);
-            px(wp, new_w, h, new_w - 3, 1, fg);
-            px(wp, new_w, h, new_w - 2, 1, fg);
-
-            print_sFonts[0][tidx].unk0 = (void *)wbuf;
-            continue;  // skip the normal unk0 assignment below
+            // Í: I is very narrow (~3-4px) - draw accent using full width
+            // Row 0: right side of accent (full width line)
+            for (s32 x2 = w/2; x2 < w; x2++) px(dst_pixels, w, h, x2, 0, fg);
+            // Row 1: left side of accent
+            for (s32 x2 = 0; x2 <= w/2; x2++) px(dst_pixels, w, h, x2, 1, fg);
+            // Row 2: clear separator between accent and I stroke
+            for (s32 x2 = 0; x2 < w; x2++) dst_pixels[2 * w + x2] = 0;
         } else {
             // Ó, Ú: these looked perfect before - keep exact same logic
             s32 ocx = w / 2;  // original center calculation
