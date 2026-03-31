@@ -849,7 +849,6 @@ static DialogDef lair_defs[] = {
     DIALOG(0xFBE, fbe_b, fbe_t),     /* Cheating: erase save warning */
     DIALOG(0xFBF, fbf_b, fbf_t),     /* Cheating: save erased */
     DIALOG(0xFAD, fad_b, fad_t),     /* Dingpot: first meeting */
-    DIALOG(0x10A1, a1_b, a1_t),      /* Brentilda: first meeting */
     DIALOG(0xFAC, fac_b, fac_t),     /* Grunty: taunts from above */
     DIALOG(0xFBB, fbb_b, fbb_t),     /* Dingpot: must defeat witch */
     DIALOG(0xFBA, fba_b, fba_t),     /* Dingpot: brush teeth */
@@ -885,11 +884,6 @@ static DialogDef lair_defs[] = {
     DIALOG(0xF79, f79_b, f79_t),     /* Cauldron: first activated */
     DIALOG(0xF7A, f7a_b, f7a_t),     /* Cauldron: pair found */
     /* Notes progress */
-    DIALOG(0xF74, f74_b, f74_t),     /* Enough notes first door */
-    DIALOG(0xF75, f75_b, f75_t),     /* Best score saved */
-    DIALOG(0xF76, f76_b, f76_t),     /* Beat your best */
-    DIALOG(0xF77, f77_b, f77_t),     /* Best is now ~ */
-    DIALOG(0xF78, f78_b, f78_t),     /* All 100 notes */
     /* Cheato meet & hints */
     DIALOG(0xFA5, fa5_b, fa5_t),     /* Cheato: first meet */
     DIALOG(0xFA6, fa6_b, fa6_t),     /* Cheato: second meet */
@@ -902,11 +896,6 @@ static DialogDef lair_defs[] = {
     DIALOG(0xFA9, fa9_b, fa9_t),     /* Cheato: red feathers */
     DIALOG(0xFAA, faa_b, faa_t),     /* Cheato: gold feathers */
     /* Items & Pads */
-    DIALOG(0xDA5, da5_b, da5_t),     /* Wading boots: not learned */
-    DIALOG(0xA84, a84_b, a84_t),     /* Turbo Trainers learn */
-    DIALOG(0xA85, a85_b, a85_t),     /* Turbo Trainers refresher */
-    DIALOG(0xA24, a24_b, a24_t),     /* Jump pad discovered */
-    DIALOG(0xA25, a25_b, a25_t),     /* Flight pad discovered */
 };
 
 DialogDefTable lair_table = {

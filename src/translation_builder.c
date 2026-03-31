@@ -125,8 +125,8 @@ static void build_dialog(DialogDef *def) {
             }
         }
 
-        // Calculate size: 3 metadata + entries
-        size = 3;
+        // Calculate size: 3 dialog header + 3 quiz metadata + entries
+        size = 3 + 3;
         for (i = 0; i < entry_count; i++) {
             slen = tr_strlen(def->bottom[i].text);
             size += 2 + slen + 1;
@@ -136,7 +136,12 @@ static void build_dialog(DialogDef *def) {
         def->built_size = size;
         p = def->built_data;
 
-        // Quiz metadata header
+        // Dialog header (AEP skips these 3 bytes via offset mechanism)
+        *p++ = 0x03;  // num_versions
+        *p++ = 0x03;  // offset_v0 low byte = 3
+        *p++ = 0x00;  // offset_v0 high byte = 0
+
+        // Quiz metadata (this is what the quiz parser actually reads)
         *p++ = (u8)num_questions;
         *p++ = (u8)num_answers;
         *p++ = 0x00; // num_wrong_only = 0

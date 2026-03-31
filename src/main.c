@@ -85,6 +85,9 @@ static void u32_to_hex(u32 val, char *out) {
     out[8] = '\0';
 }
 
+// QuizRawAsset type (defined in quiz_raw.c)
+typedef struct { s32 asset_id; const u8 *data; s32 size; } QuizRawAsset;
+
 // Run after AEP is initialised
 RECOMP_HOOK_RETURN("assetCache_init")
 void onInit()
@@ -121,9 +124,12 @@ void onInit()
         for (s32 i = 0; i < tables[t]->count; i++) {
             if (tables[t]->defs[i].built_data != NULL) {
                 s32 aid = tables[t]->defs[i].asset_id;
-                // Skip quiz question assets (0x1213-0x1276) - format incompatible
-                // TODO v3: implement raw binary quiz format
-                if (aid >= 0x1213 && aid <= 0x1276) continue;
+                // Skip ALL quiz question types - registered separately via raw binary
+                // Text: 0x1213-0x1276, Picture: 0x12DB-0x12ED, Sound: 0x13A3-0x13D5, Grunty: 0x1407-0x1424
+                if ((aid >= 0x1213 && aid <= 0x1276) ||
+                    (aid >= 0x12DB && aid <= 0x12ED) ||
+                    (aid >= 0x13A3 && aid <= 0x13D5) ||
+                    (aid >= 0x1407 && aid <= 0x1424)) continue;
                 bk_recomp_aep_register_replacement_with_size(
                     aid,
                     (void *)tables[t]->defs[i].built_data,
@@ -135,6 +141,21 @@ void onInit()
     }
 
     recomp_printf("[BK-ES] %d dialogos registrados\n", total);
+
+    // Register raw quiz assets (0x1213-0x1276) with exact binary format
+    {
+        extern QuizRawAsset quiz_raw_assets[];
+        extern s32 quiz_raw_count;
+        for (s32 qi = 0; qi < quiz_raw_count; qi++) {
+            bk_recomp_aep_register_replacement_with_size(
+                quiz_raw_assets[qi].asset_id,
+                (void *)quiz_raw_assets[qi].data,
+                quiz_raw_assets[qi].size
+            );
+            total++;
+        }
+        recomp_printf("[BK-ES] +%d quiz assets raw\n", quiz_raw_count);
+    }
 
     // === TOTALS PAGE LEVEL NAMES ===
     // Bold font doesn't support remapped glyphs - use plain ASCII
@@ -166,22 +187,10 @@ void onInit()
 
 // Hook zoombox string display to translate confirmation prompts
 
-// Simple string comparison (avoid conflicting strcmp)
-static s32 str_eq(const char *a, const char *b) {
-    while (*a && *b) { if (*a++ != *b++) return 0; }
-    return *a == *b;
-}
-
-RECOMP_HOOK("func_803183A4")
-void translateZoomboxStrings(void *zoombox, char **arg1) {
-    if (*arg1 != NULL) {
-        if (str_eq(*arg1, "ARE YOU SURE?")) {
-            *arg1 = "ESTAS SEGURO?";
-        } else if (str_eq(*arg1, "A - YES, B - NO")) {
-            *arg1 = "A - SI, B - NO";
-        }
-    }
-}
+// Translate pause menu confirmation strings
+// We can't use HOOK to modify args, so we replace the strings
+// in D_8036C520 (the source array for pause menu zoombox text)
+extern struct { f32 delay; f32 unk4; char *str; s16 y; u8 portrait; u8 unkF; } D_8036C520[4];
 
 // ============================================================
 // CUSTOM LATIN-1 FONT RENDERER
