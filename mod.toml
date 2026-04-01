@@ -4,16 +4,18 @@
 
 id = "bk_spanish_translation"
 
-version = "0.1.0"
+version = "3.2.0"
 
 display_name = "BK Spanish / Espanol"
 
 description = """
-Traduce los dialogos de Banjo-Kazooie al espanol. \
-Trabajo en progreso - se iran agregando traducciones por mundo gradualmente.
+Traduccion completa de Banjo-Kazooie al espanol. \
+913+ dialogos traducidos, 9 mundos, Quiz Furnace Fun, cutscenes, menus. \
+Incluye tildes visibles y signos invertidos. \
+Compatible con BK Reloaded (HD textures) usando el .rtz incluido.
 """
 
-short_description = "Traduccion al espanol de Banjo-Kazooie."
+short_description = "Traduccion completa al espanol de Banjo-Kazooie."
 
 authors = [ "wilrojasdev" ]
 
