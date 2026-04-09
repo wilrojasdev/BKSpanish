@@ -1,8 +1,16 @@
 # BK Spanish / Espanol
 
-Mod de traduccion completa al espanol para **Banjo-Kazooie: Recompiled**.
+Mod de traduccion completa al espanol latino para **Banjo-Kazooie: Recompiled**.
 
-![BK Spanish](https://img.shields.io/badge/Idioma-Espa%C3%B1ol-red) ![Version](https://img.shields.io/badge/Version-3.1-blue) ![Assets](https://img.shields.io/badge/Assets-913%2B-green)
+![BK Spanish](https://img.shields.io/badge/Idioma-Espa%C3%B1ol%20Latino-red) ![Version](https://img.shields.io/badge/Version-3.2-blue) ![Assets](https://img.shields.io/badge/Assets-913%2B-green)
+
+## Capturas
+
+![Menu de seleccion de partida](screenshots/menu_partida.jpg)
+![Menu de pausa](screenshots/menu_pausa.jpg)
+![Brentilda dialogo](screenshots/brentilda.jpg)
+![Quiz Furnace Fun](screenshots/quiz_grunty.jpg)
+![Tablero del quiz](screenshots/quiz_tablero.jpg)
 
 ## Contenido
 
