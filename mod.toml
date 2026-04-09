@@ -10,7 +10,10 @@ display_name = "Spanish Language"
 
 description = """
 Traduccion completa al espanol latino de Banjo-Kazooie: Recompiled. \
-Todos los dialogos, menus, quiz y escenas traducidos.
+Todos los dialogos, menus, quiz y escenas traducidos. \
+Los nombres de los mundos (letreros) aun no estan traducidos. \
+Las traducciones fueron generadas con IA (Claude Code) y pueden contener errores. \
+Si encuentras algun fallo, reportalo en GitHub.
 """
 
 short_description = "Traduccion al espanol latino."
@@ -39,6 +42,7 @@ func_reference_syms_file = "BanjoRecompSyms/bk.us.rev0.syms.toml"
 data_reference_syms_files = [ "BanjoRecompSyms/bk.us.rev0.datasyms.toml" ]
 
 additional_files = [
+    "thumb.png",
     "rt64.json",
     "fonts/excl_inv.png",
     "fonts/quest_inv.png",
