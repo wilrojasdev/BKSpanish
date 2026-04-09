@@ -13,7 +13,13 @@ Traduccion completa al espanol latino de Banjo-Kazooie: Recompiled. \
 Todos los dialogos, menus, quiz y escenas traducidos. \
 Los nombres de los mundos (letreros) aun no estan traducidos. \
 Las traducciones fueron generadas con IA (Claude Code) y pueden contener errores. \
-Si encuentras algun fallo, reportalo en GitHub.
+Si encuentras algun fallo, reportalo en GitHub. \
+--- Creditos --- \
+Traduccion y edicion: wilrojasdev | \
+Desarrollo del mod: Claude Code (Anthropic) | \
+Referencia de estructura: V10lator (mod aleman) | \
+Asset Expansion Pak: Dario | \
+HD Textures: GhostlyDark (BK Reloaded)
 """
 
 short_description = "Traduccion al espanol latino."
