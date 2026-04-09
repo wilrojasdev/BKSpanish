@@ -6,11 +6,11 @@ Mod de traduccion completa al espanol latino para **Banjo-Kazooie: Recompiled**.
 
 ## Capturas
 
-![Menu de seleccion de partida](screenshots/menu_partida.jpg)
-![Menu de pausa](screenshots/menu_pausa.jpg)
-![Brentilda dialogo](screenshots/brentilda.jpg)
-![Quiz Furnace Fun](screenshots/quiz_grunty.jpg)
-![Tablero del quiz](screenshots/quiz_tablero.jpg)
+![Menu de seleccion de partida](https://raw.githubusercontent.com/wilrojasdev/BKSpanish/master/screenshots/menu_partida.jpg)
+![Menu de pausa](https://raw.githubusercontent.com/wilrojasdev/BKSpanish/master/screenshots/menu_pausa.jpg)
+![Brentilda dialogo](https://raw.githubusercontent.com/wilrojasdev/BKSpanish/master/screenshots/brentilda.jpg)
+![Quiz Furnace Fun](https://raw.githubusercontent.com/wilrojasdev/BKSpanish/master/screenshots/quiz_grunty.jpg)
+![Tablero del quiz](https://raw.githubusercontent.com/wilrojasdev/BKSpanish/master/screenshots/quiz_tablero.jpg)
 
 ## Contenido
 
